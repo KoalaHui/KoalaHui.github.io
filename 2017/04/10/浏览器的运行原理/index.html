@@ -8,12 +8,22 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="前端基础之浏览器运行原理##前言  作为一名前端工程师我们有必要知道浏览器是怎样将我们写的HTML、CSS以及JS转换成我们眼睛所见到的花花绿绿的文字及图片的。这也是我《前端系统性学习》专栏的开篇第一讲，后面还会有一系列的基础或一些深究原理的文章，欢迎大家关注。 ##正文  ###1、思考问题： 从输入 URL 到页面加载完成的过程中都发生了什么事情？  输入地址 浏览器查找域名的IP地址 浏览器">
+<meta name="keywords">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/2017/04/10/浏览器的运行原理/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="前端基础之浏览器运行原理##前言  作为一名前端工程师我们有必要知道浏览器是怎样将我们写的HTML、CSS以及JS转换成我们眼睛所见到的花花绿绿的文字及图片的。这也是我《前端系统性学习》专栏的开篇第一讲，后面还会有一系列的基础或一些深究原理的文章，欢迎大家关注。 ##正文  ###1、思考问题： 从输入 URL 到页面加载完成的过程中都发生了什么事情？  输入地址 浏览器查找域名的IP地址 浏览器">
+<meta property="og:image" content="http://img.blog.csdn.net/20170406152053970?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjk5NTg2NTU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20170406152533000?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjk5NTg2NTU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20170406152948989?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjk5NTg2NTU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20170406153338475?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjk5NTg2NTU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:updated_time" content="2017-04-10T08:40:02.929Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="前端基础之浏览器运行原理##前言  作为一名前端工程师我们有必要知道浏览器是怎样将我们写的HTML、CSS以及JS转换成我们眼睛所见到的花花绿绿的文字及图片的。这也是我《前端系统性学习》专栏的开篇第一讲，后面还会有一系列的基础或一些深究原理的文章，欢迎大家关注。 ##正文  ###1、思考问题： 从输入 URL 到页面加载完成的过程中都发生了什么事情？  输入地址 浏览器查找域名的IP地址 浏览器">
+<meta name="twitter:image" content="http://img.blog.csdn.net/20170406152053970?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjk5NTg2NTU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -149,9 +159,7 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-浏览器的运行原理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-浏览器的运行原理" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
@@ -208,63 +216,26 @@ Hello DOM
       
 
       
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/10/浏览器的运行原理/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-HTML" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="前端基础之HTML"><a href="#前端基础之HTML" class="headerlink" title="前端基础之HTML"></a>前端基础之HTML</h1><h1 id="HTML是什么？"><a href="#HTML是什么？" class="headerlink" title="HTML是什么？"></a>HTML是什么？</h1><p>HTML(Hyper Text Markup Language超文本标记语言 ) 是一种基础技术，常与CSS、JavaScript一起被众多网站用于设计令人赏心悦目的网页、网页应用程序以及移动应用程序的用户界面。 网页浏览器可以读取HTML文件，并将其渲染成可视化网页。 HTML描述了一个网站的结构语义随着线索的呈现，使之成为一种标记语言而非编程语言；这是维基百科的解释，而我眼中的HTML则是一个容器，用来容纳各种我们需要展示的文字，图片，声音的容器。</p>
-<h1 id="HTML用来做什么？"><a href="#HTML用来做什么？" class="headerlink" title="HTML用来做什么？"></a>HTML用来做什么？</h1><p>它容纳了我们需要展示的文字、图片、声音，然后我们可以通过浏览器来查看它，（HTML是用来制作网站的。就这么简单！）</p>
-<h1 id="HTML怎么用？"><a href="#HTML怎么用？" class="headerlink" title="HTML怎么用？"></a>HTML怎么用？</h1><p>HTML分为很多种类，不同的类型装载不同的内容，比如说</p>
-<p><code>&lt;img&gt;</code>是用来容纳图片的</p>
-<p><code>&lt;p&gt;</code>是用来容纳文字的</p>
-<p><code>&lt;div&gt;</code>则是用来容纳前面所说的<code>&lt;img&gt;&lt;p&gt;</code>等的容器</p>
-<p>他们分工明确，你要做的只是像垃圾分类一样，把你需要展示给用户的内容放入对的容器，就是这么简单；<br>当然容器是有大小、颜色、姓名的 而这些你都可以控制，就是给你的容器添加你需要的属性：width、heigth、id等等；</p>
-<p>下面就是一段标准的HTML文档</p>
-<pre><code>    &lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;title&gt;我是标准的HTML模板，你可以放你要放的东西进来&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;div id=&quot;旺财&quot;&gt;
-&lt;img src=&quot;http://image.baidu.com&quot; alt=&quot;#&quot; style=&quot;width: 200px;height: 200px;&quot;&gt;
-&lt;p&gt;我的名字是旺财&lt;/p&gt;
-&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre><h1 id="HTML中需要注意的地方"><a href="#HTML中需要注意的地方" class="headerlink" title="HTML中需要注意的地方"></a>HTML中需要注意的地方</h1><p>你可以以多种不同的方式来编写HTML；同时，浏览器也可以以多种不同的方式来理解HTML。你可以认为<strong>HTML有很多种方言</strong>。这就是为什么某些网站会在不同的浏览器上显示出不同效果的原因。就像是不同的家庭拥有不同的容器，你尽量选择大家都有的容器来容纳你需要的内容。</p>
-<h1 id="HTML拓展"><a href="#HTML拓展" class="headerlink" title="HTML拓展"></a>HTML拓展</h1><p>XHTML是HTML的严格模式，怎么说呢，就像是规定了容器的名字必须是用小写字母写的（标签名小写）；<br>容器装了东西后必须盖好（标签必须关闭）；<br>容器与容器之间的关系必须正确，不能小容器装大容器，大容器的盖子盖到小容器上面等等（元素必须被正确地嵌套）<br>所有的容器必须放在一个架子上面（ 文档必须拥有根元素）</p>
-
-      
-
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -273,18 +244,78 @@ Hello DOM
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/10/HTML/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/04/10/浏览器的运行原理/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
 
-
+  
+<nav id="article-nav">
+  
+    <a href="/2017/04/10/HTML/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+</nav>
 
 
 
@@ -292,7 +323,10 @@ Hello DOM
 
 
   
+    <div class="duoshuo"></div>
   
+
+
 
 
           </div>
@@ -314,8 +348,8 @@ Hello DOM
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

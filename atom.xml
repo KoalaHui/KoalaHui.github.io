@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-04-10T08:31:06.393Z</updated>
+  <updated>2017-04-10T08:40:02.929Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,74 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/04/10/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86/"/>
+    <id>http://yoursite.com/2017/04/10/浏览器的运行原理/</id>
+    <published>2017-04-10T08:40:21.837Z</published>
+    <updated>2017-04-10T08:40:02.929Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前端基础之浏览器运行原理"><a href="#前端基础之浏览器运行原理" class="headerlink" title="前端基础之浏览器运行原理"></a>前端基础之浏览器运行原理</h1><p>##前言</p>
+<hr>
+<p>作为一名前端工程师我们有必要知道浏览器是怎样将我们写的HTML、CSS以及JS转换成我们眼睛所见到的花花绿绿的文字及图片的。这也是我《前端系统性学习》专栏的开篇第一讲，后面还会有一系列的基础或一些深究原理的文章，欢迎大家关注。</p>
+<p>##正文</p>
+<hr>
+<p>###<strong>1、思考问题： 从输入 URL 到页面加载完成的过程中都发生了什么事情？</strong></p>
+<ol>
+<li>输入地址</li>
+<li>浏览器查找域名的IP地址</li>
+<li>浏览器向web服务器发送一个HTTP请求</li>
+<li>服务器的永久重定向响应</li>
+<li>浏览器跟踪重定向地址</li>
+<li>服务器处理请求</li>
+<li>服务器返回一个 响应</li>
+<li>浏览器显示HTML</li>
+<li>浏览器发送请求获取嵌入在HTML中的资源（如图片、音频、视频、CSS、js等等）</li>
+<li>浏览器发送异步请求</li>
+</ol>
+<p>###<strong>2、作为一个前端，我们将问题聚焦于后面的两点浏览器显示HTML、浏览器发送请求获取嵌入在HTML中的资源（如图片、音频、视频、CSS、js等等）浏览器为了完成这两步骤到底发生了什么？</strong></p>
+<p>####2.1首先我们先来了解下浏览器的组成</p>
+<p> <img src="http://img.blog.csdn.net/20170406152053970?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjk5NTg2NTU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="图片来自网络"></p>
+<pre><code>* 用户界面：定义了一些常用的浏览器组件，比如地址栏，返回、书签等等
+* 数据持久化：指浏览器的cookie、local storage等组件
+* 浏览器引擎：平台应用的相关接口，在用户界面和呈现引擎之间传送指令。
+* 渲染引擎：处理HTML、CSS的解析与渲染
+* JavaScript解释器：解析和执行JavaScript代码
+* UI后端：指浏览器的的图形库等
+* 网络：用于网络调用，比如HTTP请求
+</code></pre><p>####2.2接下来我们来看看浏览器渲染页面的主流程<br>当我们在浏览器的地址栏输入了url（用户界面），浏览器引擎通知渲染引擎调用网络API实现HTTP请求，当服务器返回一个响应后，渲染引擎开始工作<br>下面是在取得内容之后的基本流程：<br>解析html以构建dom树-&gt;构建render树-&gt;布局render树-&gt;绘制render树</p>
+<p>   <img src="http://img.blog.csdn.net/20170406152533000?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjk5NTg2NTU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="图片来自网络"></p>
+<p>渲染引擎开始解析html，并将标签转化为内容树中的dom节点。接着，它解析外部CSS文件及style标签中的样式信息。这些样式信息以及html中的可见性指令将被用来构建另一棵树——render树。<br>Render树由一些包含有颜色和大小等属性的矩形组成，它们将被按照正确的顺序显示到屏幕上。<br>Render树构建好了之后，将会执行布局过程，它将确定每个节点在屏幕上的确切坐标（layout\reflow）。再下一步就是绘制，即遍历render树，并使用UI后端层绘制每个节点。</p>
+<p>###<strong>3、DOM解析、CSS解析、渲染</strong></p>
+<p>####3.1DOM解析<br>HTML的解析分为两个过程，词法解析和语法解析。词法解析就是将整个HTML文档拆分成一个一个标签，而语法解析就是列出这一个个标签之间的关系。下面就是HTML文档完成解析转成的DOM树：</p>
+<pre><code>&lt;html&gt;
+&lt;body&gt;
+&lt;p&gt;
+Hello DOM
+&lt;/p&gt;
+&lt;div&gt;&lt;img src=”example.png” /&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p><img src="http://img.blog.csdn.net/20170406152948989?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjk5NTg2NTU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="（图片来自网络）"></p>
+<p>####3.2CSS解析<br>将css文件解析为样式表对象。该对象包含css规则，该规则包含选择器和声明对象。</p>
+<p>####3.3渲染<br><img src="http://img.blog.csdn.net/20170406153338475?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjk5NTg2NTU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>#####3.3.1、计算CSS样式<br>计算CSS样式其实就是将CSS样式绑定到DOM节点上的过程， CSS匹配DOM Tree主要是从右到左解析CSS的选择器， CSS匹配HTML元素是一个相当复杂和有性能问题的事情。所以，DOM树要小，CSS尽量用id和class选择器，千万不要过渡层叠下去，并且在最右边千万别写*通配符。</p>
+<p>#####3.3.2、构建render树<br>构建render树就是将上面计算好的CSS样式和render Tree关联起来</p>
+<p>#####3.3.3、layout（定位标签在页面中的位置）<br>将上面两步构建好的render Tree包含了位置、颜色、大小等信息，layout就是通过编译这些信息将DOM节点摆放到页面中对应的位置</p>
+<p>#####3.3.4、paint  （绘制元素）<br>确定好位置我们就要使用我们的UI组件来将形形色色的内容颜色具体的表现形式paint出来展示给大家了<br>值得注意的是在layout和paint的过程中有两个很重要的概念：<br><strong>Reflow</strong>:字面意思是重新流程，我们需要去重新验证并计算Render Tree，这样就涉及到整个页面的修改，极好性能，所以我们在做性能优化的时候就是尽可能的让浏览器少Reflow<br><strong>Repaint</strong>:字面意思是重新绘制，我们需要重画屏幕的一部分页面，但是不需要去重新验证并计算Render Tree,这样不会有那么大的性能损耗</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前端基础之浏览器运行原理&quot;&gt;&lt;a href=&quot;#前端基础之浏览器运行原理&quot; class=&quot;headerlink&quot; title=&quot;前端基础之浏览器运行原理&quot;&gt;&lt;/a&gt;前端基础之浏览器运行原理&lt;/h1&gt;&lt;p&gt;##前言&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;作为一名前端工程师我们有必
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title></title>
