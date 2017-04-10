@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hexo</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2017-04-10T08:31:06.393Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>John Doe</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/04/10/HTML/"/>
+    <id>http://yoursite.com/2017/04/10/HTML/</id>
+    <published>2017-04-10T08:29:49.833Z</published>
+    <updated>2017-04-10T08:31:06.393Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前端基础之HTML"><a href="#前端基础之HTML" class="headerlink" title="前端基础之HTML"></a>前端基础之HTML</h1><h1 id="HTML是什么？"><a href="#HTML是什么？" class="headerlink" title="HTML是什么？"></a>HTML是什么？</h1><p>HTML(Hyper Text Markup Language超文本标记语言 ) 是一种基础技术，常与CSS、JavaScript一起被众多网站用于设计令人赏心悦目的网页、网页应用程序以及移动应用程序的用户界面。 网页浏览器可以读取HTML文件，并将其渲染成可视化网页。 HTML描述了一个网站的结构语义随着线索的呈现，使之成为一种标记语言而非编程语言；这是维基百科的解释，而我眼中的HTML则是一个容器，用来容纳各种我们需要展示的文字，图片，声音的容器。</p>
+<h1 id="HTML用来做什么？"><a href="#HTML用来做什么？" class="headerlink" title="HTML用来做什么？"></a>HTML用来做什么？</h1><p>它容纳了我们需要展示的文字、图片、声音，然后我们可以通过浏览器来查看它，（HTML是用来制作网站的。就这么简单！）</p>
+<h1 id="HTML怎么用？"><a href="#HTML怎么用？" class="headerlink" title="HTML怎么用？"></a>HTML怎么用？</h1><p>HTML分为很多种类，不同的类型装载不同的内容，比如说</p>
+<p><code>&lt;img&gt;</code>是用来容纳图片的</p>
+<p><code>&lt;p&gt;</code>是用来容纳文字的</p>
+<p><code>&lt;div&gt;</code>则是用来容纳前面所说的<code>&lt;img&gt;&lt;p&gt;</code>等的容器</p>
+<p>他们分工明确，你要做的只是像垃圾分类一样，把你需要展示给用户的内容放入对的容器，就是这么简单；<br>当然容器是有大小、颜色、姓名的 而这些你都可以控制，就是给你的容器添加你需要的属性：width、heigth、id等等；</p>
+<p>下面就是一段标准的HTML文档</p>
+<pre><code>    &lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;我是标准的HTML模板，你可以放你要放的东西进来&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;旺财&quot;&gt;
+&lt;img src=&quot;http://image.baidu.com&quot; alt=&quot;#&quot; style=&quot;width: 200px;height: 200px;&quot;&gt;
+&lt;p&gt;我的名字是旺财&lt;/p&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h1 id="HTML中需要注意的地方"><a href="#HTML中需要注意的地方" class="headerlink" title="HTML中需要注意的地方"></a>HTML中需要注意的地方</h1><p>你可以以多种不同的方式来编写HTML；同时，浏览器也可以以多种不同的方式来理解HTML。你可以认为<strong>HTML有很多种方言</strong>。这就是为什么某些网站会在不同的浏览器上显示出不同效果的原因。就像是不同的家庭拥有不同的容器，你尽量选择大家都有的容器来容纳你需要的内容。</p>
+<h1 id="HTML拓展"><a href="#HTML拓展" class="headerlink" title="HTML拓展"></a>HTML拓展</h1><p>XHTML是HTML的严格模式，怎么说呢，就像是规定了容器的名字必须是用小写字母写的（标签名小写）；<br>容器装了东西后必须盖好（标签必须关闭）；<br>容器与容器之间的关系必须正确，不能小容器装大容器，大容器的盖子盖到小容器上面等等（元素必须被正确地嵌套）<br>所有的容器必须放在一个架子上面（ 文档必须拥有根元素）</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前端基础之HTML&quot;&gt;&lt;a href=&quot;#前端基础之HTML&quot; class=&quot;headerlink&quot; title=&quot;前端基础之HTML&quot;&gt;&lt;/a&gt;前端基础之HTML&lt;/h1&gt;&lt;h1 id=&quot;HTML是什么？&quot;&gt;&lt;a href=&quot;#HTML是什么？&quot; class=&quot;
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
