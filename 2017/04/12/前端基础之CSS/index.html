@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2017/4 | KoalaHui的博客</title>
+  <title>KoalaHui的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="前端基础之CSS在学习css之前，我们需要对HTML的知识有基本的了解！请查看我的上一篇博客前端基础之HTML CSS是什么？CSS就是一种叫做样式表（style sheet）的技术。也有的人称之为层叠样式表（Cascading Style Sheet）。 CSS的用来做什么的? CSS就是用来修饰HTML 在网页开发中采用CSS技术，可以有效地对页面的布局、字体、颜色、背景和其它效果实现更加精确">
+<meta name="keywords">
+<meta property="og:type" content="article">
 <meta property="og:title" content="KoalaHui的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2017/04/index.html">
+<meta property="og:url" content="http://yoursite.com/2017/04/12/前端基础之CSS/index.html">
 <meta property="og:site_name" content="KoalaHui的博客">
+<meta property="og:description" content="前端基础之CSS在学习css之前，我们需要对HTML的知识有基本的了解！请查看我的上一篇博客前端基础之HTML CSS是什么？CSS就是一种叫做样式表（style sheet）的技术。也有的人称之为层叠样式表（Cascading Style Sheet）。 CSS的用来做什么的? CSS就是用来修饰HTML 在网页开发中采用CSS技术，可以有效地对页面的布局、字体、颜色、背景和其它效果实现更加精确">
+<meta property="og:updated_time" content="2017-04-12T09:03:19.128Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="KoalaHui的博客">
+<meta name="twitter:description" content="前端基础之CSS在学习css之前，我们需要对HTML的知识有基本的了解！请查看我的上一篇博客前端基础之HTML CSS是什么？CSS就是一种叫做样式表（style sheet）的技术。也有的人称之为层叠样式表（Cascading Style Sheet）。 CSS的用来做什么的? CSS就是用来修饰HTML 在网页开发中采用CSS技术，可以有效地对页面的布局、字体、颜色、背景和其它效果实现更加精确">
   
     <link rel="alternative" href="/atom.xml" title="KoalaHui的博客" type="application/atom+xml">
   
@@ -147,85 +152,111 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-前端基础之CSS" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="前端基础之CSS"><a href="#前端基础之CSS" class="headerlink" title="前端基础之CSS"></a>前端基础之CSS</h1><p>在学习css之前，我们需要对HTML的知识有基本的了解！请查看我的上一篇博客<a href="https://koalahui.github.io/2017/04/10/HTML/" target="_blank" rel="external">前端基础之HTML</a></p>
+<h2 id="CSS是什么？"><a href="#CSS是什么？" class="headerlink" title="CSS是什么？"></a>CSS是什么？</h2><p>CSS就是一种叫做样式表（style sheet）的技术。也有的人称之为层叠样式表（Cascading Style Sheet）。</p>
+<h2 id="CSS的用来做什么的"><a href="#CSS的用来做什么的" class="headerlink" title="CSS的用来做什么的?"></a>CSS的用来做什么的?</h2><ol>
+<li>CSS就是用来修饰HTML</li>
+<li>在网页开发中采用CSS技术，可以有效地对页面的布局、字体、颜色、背景和其它效果实现更加精确的控制。</li>
+<li>以前一些非得通过图片转换实现的功能，现在只要用CSS就可以轻松实现，从而更快地下载页面。</li>
+<li>使页面的字体变得更漂亮，更容易编排，使页面真正赏心悦目。</li>
+<li>你可以轻松地控制页面的布局 。</li>
+</ol>
+<h2 id="CSS怎么用？"><a href="#CSS怎么用？" class="headerlink" title="CSS怎么用？"></a>CSS怎么用？</h2><p>CSS必须结合HTML来用（就像是衣服如果没有人来穿，再好看放着也是无用的东西）</p>
+<h3 id="首先，HTML与CSS的结合方式"><a href="#首先，HTML与CSS的结合方式" class="headerlink" title="首先，HTML与CSS的结合方式"></a>首先，HTML与CSS的结合方式</h3><p> <strong>1、style属性方式（内联样式）</strong></p>
+<blockquote>
+<p>适合局部修改<br>*<code>&lt;font style=&quot;font-size:150px;color: red;&quot;&gt;
+今天天气好晴朗&lt;/font&gt;</code></p>
+</blockquote>
+<p><strong>2、style标签方式：（内嵌样式）</strong></p>
+<blockquote>
+<p><code>&lt;style&gt;&lt;/style&gt;</code>存在于head标签之中的</p>
+<p>例如：<br>    <code>&lt;style type=&quot;text/css&quot;&gt;font{font-size:150px;color: red; }&lt;/style&gt;</code><br>页面的多个标签统一设置。</p>
+</blockquote>
+<p><strong>3、链接方式（外部样式最常用的方式）</strong>                          </p>
+<blockquote>
+<p>格式： <code>&lt;link rel=&quot;stylesheet&quot;  type=&quot;text/css&quot;  href=&quot;CSS文件路径&quot;/&gt;</code><br>存在于<head>标签中</head></p>
+</blockquote>
+<h3 id="然后，HTML标签与CSS样式的绑定"><a href="#然后，HTML标签与CSS样式的绑定" class="headerlink" title="然后，HTML标签与CSS样式的绑定"></a>然后，HTML标签与CSS样式的绑定</h3><p>如何将指定的CSS样式作用于特定的HTML标签上呢，这就轮到我们的CSS选择器登场了。</p>
+<blockquote>
+<p>CSS选择器：你可以将它看作是一把钥匙，当找到匹配的锁就会将锁打开</p>
+</blockquote>
+<h3 id="CSS选择器可以分为："><a href="#CSS选择器可以分为：" class="headerlink" title="CSS选择器可以分为："></a>CSS选择器可以分为：</h3><p><strong>1、元素选择器</strong> </p>
+<blockquote>
+<p>就是把HTML标签名作为选择器名称</p>
+<p>格式： 标签名 {}</p>
+</blockquote>
+<p><strong>2、类选择器</strong>      </p>
+<blockquote>
+<p>样式格式：  .class名{}</p>
+<p>标签格式： </p><p class="”class名”"></p><p></p>
+<p>能设置不同标签的相同样式</p>
+</blockquote>
+<p><strong>3、Id选择器</strong></p>
+<blockquote>
+<p>样式格式：  #id名{}</p>
+<p>标签格式：<pid=”id名”></pid=”id名”></p><p></p>
+<p>有针对性地设置样式</p>
+</blockquote>
+<p><strong>4、属性选择器</strong></p>
+<blockquote>
+<p>根据标签名和标签的属性名以及属性值来选择</p>
+<p>样式格式：标签名[属性名称=’属性值’]</p>
+</blockquote>
+<p><strong>5、伪元素选择器</strong></p>
+<blockquote>
+<p>HTML预定义的选择器</p>
+<p>格式：标签名:选择器{}</p>
+<p>选择器名称为 HTML标签的状态。例如：a:link{}表示链接标签在未访问过 时的样式。</p>
+</blockquote>
+<p><strong>这篇文章只是粗略的介绍了一下CSS，下面我将会写一系列的有关CSS的文章，敬请期待……</strong></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/12/前端基础之CSS/" class="archive-article-date">
-  	<time datetime="2017-04-12T09:03:52.292Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-12</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/10/浏览器的运行原理/" class="archive-article-date">
-  	<time datetime="2017-04-10T08:40:21.837Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-10</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/10/HTML/" class="archive-article-date">
-  	<time datetime="2017-04-10T08:29:49.833Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-10</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+<nav id="article-nav">
+  
+    <a href="/2017/04/10/浏览器的运行原理/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+</nav>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
+
+
+
+
   
-  
-    </div></section>
+    <div class="duoshuo"></div>
   
 
-    
+
 
 
           </div>
@@ -250,8 +281,8 @@
         mathjax: false,
         animate: false,
         isHome: false,
-        isPost: false,
-        isArchive: true,
+        isPost: true,
+        isArchive: false,
         isTag: false,
         isCategory: false,
         open_in_new: false
