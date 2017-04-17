@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-04-12T09:03:19.128Z</updated>
+  <updated>2017-04-17T09:12:05.314Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,71 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/04/17/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80%E4%B9%8Bjavascript/"/>
+    <id>http://yoursite.com/2017/04/17/前端基础之javascript/</id>
+    <published>2017-04-17T09:12:59.899Z</published>
+    <updated>2017-04-17T09:12:05.314Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前端基础之javascript"><a href="#前端基础之javascript" class="headerlink" title="前端基础之javascript"></a>前端基础之javascript</h1><hr>
+<h1 id="javascript是什么？"><a href="#javascript是什么？" class="headerlink" title="javascript是什么？"></a>javascript是什么？</h1><p><strong>目前所有主流浏览器上唯一支持的脚本语言，Brendan Eich于1995年花了十天设计出来；</strong></p>
+<h4 id="完整的JavaScript包括以下几个部分："><a href="#完整的JavaScript包括以下几个部分：" class="headerlink" title="完整的JavaScript包括以下几个部分："></a>完整的JavaScript包括以下几个部分：</h4><ul>
+<li><p>ECMAScript，描述了该语言的语法和基本对象</p>
+</li>
+<li><p>文档对象模型（DOM），描述处理网页内容的方法和接口</p>
+</li>
+<li><p>浏览器对象模型（BOM），描述与浏览器进行交互的方法和接口</p>
+</li>
+</ul>
+<hr>
+<h1 id="javascript用来干什么？"><a href="#javascript用来干什么？" class="headerlink" title="javascript用来干什么？"></a>javascript用来干什么？</h1><ul>
+<li>嵌入动态文本于HTML页面</li>
+<li>对浏览器事件作出响应</li>
+<li>读写HTML元素</li>
+<li>在数据被提交到服务器之前验证数据</li>
+<li>检测访客的浏览器信息</li>
+<li>控制cookies，包括创建和修改等</li>
+</ul>
+<hr>
+<h1 id="javascript的发展"><a href="#javascript的发展" class="headerlink" title="javascript的发展"></a>javascript的发展</h1><p><strong>起初</strong>，javascript只是设计用来做页面的表单验证、操作HTML的DOM和浏览器等功能（由于当时的表单验证需要将整个页面提交到服务器，服务器发现表单中有一些数据不符合规则，则将错误返回到客户端让用户重新填写后再提交到服务器，这样一来一回就浪费了很多时间资源），javascript的设计者由于不满公司使用java为原型来设计javascript的决定，就随便用十天将javascript写出来了，这导致了javascript很多细节考虑的不够严谨;</p>
+<p><strong>加强</strong>，javascript拥有操作HTML的DOM和浏览器的功能，但这都只是本地的一些操作，它没法像java 那样访问网络， 也就没有办法调用服务器端的接口来获取数据。这样导致的问题是，当页面中有一些内容需要改变，哪怕是页面中的一个文字的改变，我们都要刷新整个页面；后面IE5引入了一个新的功能XHR(XMLHttpRequest),这个新功能弥补了javascript上面的缺陷，使javascript 拥有了调用服务器接口的能力，这样通过接口获取到数据以后，再操作DOM，这样就不用每次去更新整个页面了;</p>
+<p><strong>优化</strong>，当时的服务器接口返回的数据都是用XML格式的，比如：</p>
+<p>&gt;<br>    <book>   </book></p>
+<blockquote>
+<pre><code>&lt;isbn&gt;978-7-229-03093-3&lt;/isbn&gt;
+
+&lt;name&gt;三体&lt;/name&gt;   
+
+&lt;author&gt;刘慈欣&lt;/author&gt;  
+
+&lt;introduction&gt;中国最牛的科幻书&lt;/introduction&gt;  
+
+&lt;price&gt;38.00&lt;/price&gt;
+
+&lt;/book&gt;
+</code></pre><p>#<br> 在这段数据中真正的数据很少， 标签（像<code>&lt;name&gt;</code>这样的）反而占了大头。后来有人发现了这个问题，并且在使用javascript的时候，javascript中不是有一个对象的东西吗，比如：<br>var book = {</p>
+<p>“isbn”: “978-7-229-03093-3”,</p>
+<p>“name”: “三体”,</p>
+<p>“author”: “刘慈欣”,</p>
+<p>“introduction”: “中国最牛的科幻书”,</p>
+<p>“price”: “38.00” }</p>
+</blockquote>
+<p>这种数据结构很好的表达了之前XML中的数据，并且这种结构出自javascript，所以不用解析可以直接拿来用，直接提升了传输速度及展示速度。</p>
+<p><strong>野心</strong>，既然javascript可以自己访问网络，操作DOM来改变页面结构及展示效果，那么是不是再给javascript添加一个操作数据库的功能，它就能上天啦，确实有人这样做了（ Ryan Dahl），这个人发明了NODEJS，将javascript移植到了服务器端，现在已经很多网站都开始使用node.js来作为后台开发语言。</p>
+<p><strong>到目前为止，javascript的确可以在服务器端立足，并且有一个巨大的优势：前端和后端都用同样的开发语言：那就是 javascript。</strong></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前端基础之javascript&quot;&gt;&lt;a href=&quot;#前端基础之javascript&quot; class=&quot;headerlink&quot; title=&quot;前端基础之javascript&quot;&gt;&lt;/a&gt;前端基础之javascript&lt;/h1&gt;&lt;hr&gt;
+&lt;h1 id=&quot;javascri
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title></title>

@@ -8,12 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>KoalaHui的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="前端基础之javascript javascript是什么？目前所有主流浏览器上唯一支持的脚本语言，Brendan Eich于1995年花了十天设计出来； 完整的JavaScript包括以下几个部分： ECMAScript，描述了该语言的语法和基本对象  文档对象模型（DOM），描述处理网页内容的方法和接口  浏览器对象模型（BOM），描述与浏览器进行交互的方法和接口    javascript用">
+<meta name="keywords">
+<meta property="og:type" content="article">
 <meta property="og:title" content="KoalaHui的博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/2017/04/17/前端基础之javascript/index.html">
 <meta property="og:site_name" content="KoalaHui的博客">
+<meta property="og:description" content="前端基础之javascript javascript是什么？目前所有主流浏览器上唯一支持的脚本语言，Brendan Eich于1995年花了十天设计出来； 完整的JavaScript包括以下几个部分： ECMAScript，描述了该语言的语法和基本对象  文档对象模型（DOM），描述处理网页内容的方法和接口  浏览器对象模型（BOM），描述与浏览器进行交互的方法和接口    javascript用">
+<meta property="og:updated_time" content="2017-04-17T09:12:05.314Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="KoalaHui的博客">
+<meta name="twitter:description" content="前端基础之javascript javascript是什么？目前所有主流浏览器上唯一支持的脚本语言，Brendan Eich于1995年花了十天设计出来； 完整的JavaScript包括以下几个部分： ECMAScript，描述了该语言的语法和基本对象  文档对象模型（DOM），描述处理网页内容的方法和接口  浏览器对象模型（BOM），描述与浏览器进行交互的方法和接口    javascript用">
   
     <link rel="alternative" href="/atom.xml" title="KoalaHui的博客" type="application/atom+xml">
   
@@ -147,9 +152,7 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-前端基础之javascript" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-前端基础之javascript" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
@@ -211,10 +214,6 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/17/前端基础之javascript/">展开全文 >></a>
-        </p>
-      
 
       
       <div class="clearfix"></div>
@@ -222,7 +221,20 @@
   </div>
 </article>
 
-
+  
+<nav id="article-nav">
+  
+    <a href="/2017/04/12/前端基础之CSS/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+</nav>
 
 
 
@@ -230,240 +242,10 @@
 
 
   
-    <article id="post-前端基础之CSS" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="前端基础之CSS"><a href="#前端基础之CSS" class="headerlink" title="前端基础之CSS"></a>前端基础之CSS</h1><p>在学习css之前，我们需要对HTML的知识有基本的了解！请查看我的上一篇博客<a href="https://koalahui.github.io/2017/04/10/HTML/" target="_blank" rel="external">前端基础之HTML</a></p>
-<h2 id="CSS是什么？"><a href="#CSS是什么？" class="headerlink" title="CSS是什么？"></a>CSS是什么？</h2><p>CSS就是一种叫做样式表（style sheet）的技术。也有的人称之为层叠样式表（Cascading Style Sheet）。</p>
-<h2 id="CSS的用来做什么的"><a href="#CSS的用来做什么的" class="headerlink" title="CSS的用来做什么的?"></a>CSS的用来做什么的?</h2><ol>
-<li>CSS就是用来修饰HTML</li>
-<li>在网页开发中采用CSS技术，可以有效地对页面的布局、字体、颜色、背景和其它效果实现更加精确的控制。</li>
-<li>以前一些非得通过图片转换实现的功能，现在只要用CSS就可以轻松实现，从而更快地下载页面。</li>
-<li>使页面的字体变得更漂亮，更容易编排，使页面真正赏心悦目。</li>
-<li>你可以轻松地控制页面的布局 。</li>
-</ol>
-<h2 id="CSS怎么用？"><a href="#CSS怎么用？" class="headerlink" title="CSS怎么用？"></a>CSS怎么用？</h2><p>CSS必须结合HTML来用（就像是衣服如果没有人来穿，再好看放着也是无用的东西）</p>
-<h3 id="首先，HTML与CSS的结合方式"><a href="#首先，HTML与CSS的结合方式" class="headerlink" title="首先，HTML与CSS的结合方式"></a>首先，HTML与CSS的结合方式</h3><p> <strong>1、style属性方式（内联样式）</strong></p>
-<blockquote>
-<p>适合局部修改<br>*<code>&lt;font style=&quot;font-size:150px;color: red;&quot;&gt;
-今天天气好晴朗&lt;/font&gt;</code></p>
-</blockquote>
-<p><strong>2、style标签方式：（内嵌样式）</strong></p>
-<blockquote>
-<p><code>&lt;style&gt;&lt;/style&gt;</code>存在于head标签之中的</p>
-<p>例如：<br>    <code>&lt;style type=&quot;text/css&quot;&gt;font{font-size:150px;color: red; }&lt;/style&gt;</code><br>页面的多个标签统一设置。</p>
-</blockquote>
-<p><strong>3、链接方式（外部样式最常用的方式）</strong>                          </p>
-<blockquote>
-<p>格式： <code>&lt;link rel=&quot;stylesheet&quot;  type=&quot;text/css&quot;  href=&quot;CSS文件路径&quot;/&gt;</code><br>存在于<head>标签中</head></p>
-</blockquote>
-<h3 id="然后，HTML标签与CSS样式的绑定"><a href="#然后，HTML标签与CSS样式的绑定" class="headerlink" title="然后，HTML标签与CSS样式的绑定"></a>然后，HTML标签与CSS样式的绑定</h3><p>如何将指定的CSS样式作用于特定的HTML标签上呢，这就轮到我们的CSS选择器登场了。</p>
-<blockquote>
-<p>CSS选择器：你可以将它看作是一把钥匙，当找到匹配的锁就会将锁打开</p>
-</blockquote>
-<h3 id="CSS选择器可以分为："><a href="#CSS选择器可以分为：" class="headerlink" title="CSS选择器可以分为："></a>CSS选择器可以分为：</h3><p><strong>1、元素选择器</strong> </p>
-<blockquote>
-<p>就是把HTML标签名作为选择器名称</p>
-<p>格式： 标签名 {}</p>
-</blockquote>
-<p><strong>2、类选择器</strong>      </p>
-<blockquote>
-<p>样式格式：  .class名{}</p>
-<p>标签格式： </p><p class="”class名”"></p><p></p>
-<p>能设置不同标签的相同样式</p>
-</blockquote>
-<p><strong>3、Id选择器</strong></p>
-<blockquote>
-<p>样式格式：  #id名{}</p>
-<p>标签格式：<pid=”id名”></pid=”id名”></p><p></p>
-<p>有针对性地设置样式</p>
-</blockquote>
-<p><strong>4、属性选择器</strong></p>
-<blockquote>
-<p>根据标签名和标签的属性名以及属性值来选择</p>
-<p>样式格式：标签名[属性名称=’属性值’]</p>
-</blockquote>
-<p><strong>5、伪元素选择器</strong></p>
-<blockquote>
-<p>HTML预定义的选择器</p>
-<p>格式：标签名:选择器{}</p>
-<p>选择器名称为 HTML标签的状态。例如：a:link{}表示链接标签在未访问过 时的样式。</p>
-</blockquote>
-<p><strong>这篇文章只是粗略的介绍了一下CSS，下面我将会写一系列的有关CSS的文章，敬请期待……</strong></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/12/前端基础之CSS/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
+    <div class="duoshuo"></div>
   
-    <article id="post-浏览器的运行原理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="前端基础之浏览器运行原理"><a href="#前端基础之浏览器运行原理" class="headerlink" title="前端基础之浏览器运行原理"></a>前端基础之浏览器运行原理</h1><p>##前言</p>
-<hr>
-<p>作为一名前端工程师我们有必要知道浏览器是怎样将我们写的HTML、CSS以及JS转换成我们眼睛所见到的花花绿绿的文字及图片的。这也是我《前端系统性学习》专栏的开篇第一讲，后面还会有一系列的基础或一些深究原理的文章，欢迎大家关注。</p>
-<p>##正文</p>
-<hr>
-<p>###<strong>1、思考问题： 从输入 URL 到页面加载完成的过程中都发生了什么事情？</strong></p>
-<ol>
-<li>输入地址</li>
-<li>浏览器查找域名的IP地址</li>
-<li>浏览器向web服务器发送一个HTTP请求</li>
-<li>服务器的永久重定向响应</li>
-<li>浏览器跟踪重定向地址</li>
-<li>服务器处理请求</li>
-<li>服务器返回一个 响应</li>
-<li>浏览器显示HTML</li>
-<li>浏览器发送请求获取嵌入在HTML中的资源（如图片、音频、视频、CSS、js等等）</li>
-<li>浏览器发送异步请求</li>
-</ol>
-<p>###<strong>2、作为一个前端，我们将问题聚焦于后面的两点浏览器显示HTML、浏览器发送请求获取嵌入在HTML中的资源（如图片、音频、视频、CSS、js等等）浏览器为了完成这两步骤到底发生了什么？</strong></p>
-<p>####2.1首先我们先来了解下浏览器的组成</p>
-<p> <img src="http://img.blog.csdn.net/20170406152053970?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjk5NTg2NTU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="图片来自网络"></p>
-<pre><code>* 用户界面：定义了一些常用的浏览器组件，比如地址栏，返回、书签等等
-* 数据持久化：指浏览器的cookie、local storage等组件
-* 浏览器引擎：平台应用的相关接口，在用户界面和呈现引擎之间传送指令。
-* 渲染引擎：处理HTML、CSS的解析与渲染
-* JavaScript解释器：解析和执行JavaScript代码
-* UI后端：指浏览器的的图形库等
-* 网络：用于网络调用，比如HTTP请求
-</code></pre><p>####2.2接下来我们来看看浏览器渲染页面的主流程<br>当我们在浏览器的地址栏输入了url（用户界面），浏览器引擎通知渲染引擎调用网络API实现HTTP请求，当服务器返回一个响应后，渲染引擎开始工作<br>下面是在取得内容之后的基本流程：<br>解析html以构建dom树-&gt;构建render树-&gt;布局render树-&gt;绘制render树</p>
-<p>   <img src="http://img.blog.csdn.net/20170406152533000?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjk5NTg2NTU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="图片来自网络"></p>
-<p>渲染引擎开始解析html，并将标签转化为内容树中的dom节点。接着，它解析外部CSS文件及style标签中的样式信息。这些样式信息以及html中的可见性指令将被用来构建另一棵树——render树。<br>Render树由一些包含有颜色和大小等属性的矩形组成，它们将被按照正确的顺序显示到屏幕上。<br>Render树构建好了之后，将会执行布局过程，它将确定每个节点在屏幕上的确切坐标（layout\reflow）。再下一步就是绘制，即遍历render树，并使用UI后端层绘制每个节点。</p>
-<p>###<strong>3、DOM解析、CSS解析、渲染</strong></p>
-<p>####3.1DOM解析<br>HTML的解析分为两个过程，词法解析和语法解析。词法解析就是将整个HTML文档拆分成一个一个标签，而语法解析就是列出这一个个标签之间的关系。下面就是HTML文档完成解析转成的DOM树：</p>
-<pre><code>&lt;html&gt;
-&lt;body&gt;
-&lt;p&gt;
-Hello DOM
-&lt;/p&gt;
-&lt;div&gt;&lt;img src=”example.png” /&gt;&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre><p><img src="http://img.blog.csdn.net/20170406152948989?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjk5NTg2NTU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="（图片来自网络）"></p>
-<p>####3.2CSS解析<br>将css文件解析为样式表对象。该对象包含css规则，该规则包含选择器和声明对象。</p>
-<p>####3.3渲染<br><img src="http://img.blog.csdn.net/20170406153338475?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjk5NTg2NTU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>#####3.3.1、计算CSS样式<br>计算CSS样式其实就是将CSS样式绑定到DOM节点上的过程， CSS匹配DOM Tree主要是从右到左解析CSS的选择器， CSS匹配HTML元素是一个相当复杂和有性能问题的事情。所以，DOM树要小，CSS尽量用id和class选择器，千万不要过渡层叠下去，并且在最右边千万别写*通配符。</p>
-<p>#####3.3.2、构建render树<br>构建render树就是将上面计算好的CSS样式和render Tree关联起来</p>
-<p>#####3.3.3、layout（定位标签在页面中的位置）<br>将上面两步构建好的render Tree包含了位置、颜色、大小等信息，layout就是通过编译这些信息将DOM节点摆放到页面中对应的位置</p>
-<p>#####3.3.4、paint  （绘制元素）<br>确定好位置我们就要使用我们的UI组件来将形形色色的内容颜色具体的表现形式paint出来展示给大家了<br>值得注意的是在layout和paint的过程中有两个很重要的概念：<br><strong>Reflow</strong>:字面意思是重新流程，我们需要去重新验证并计算Render Tree，这样就涉及到整个页面的修改，极好性能，所以我们在做性能优化的时候就是尽可能的让浏览器少Reflow<br><strong>Repaint</strong>:字面意思是重新绘制，我们需要重画屏幕的一部分页面，但是不需要去重新验证并计算Render Tree,这样不会有那么大的性能损耗</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/10/浏览器的运行原理/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
 
 
-
-
-
-
-
-
-  
-    <article id="post-HTML" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="前端基础之HTML"><a href="#前端基础之HTML" class="headerlink" title="前端基础之HTML"></a>前端基础之HTML</h1><h1 id="HTML是什么？"><a href="#HTML是什么？" class="headerlink" title="HTML是什么？"></a>HTML是什么？</h1><p>HTML(Hyper Text Markup Language超文本标记语言 ) 是一种基础技术，常与CSS、JavaScript一起被众多网站用于设计令人赏心悦目的网页、网页应用程序以及移动应用程序的用户界面。 网页浏览器可以读取HTML文件，并将其渲染成可视化网页。 HTML描述了一个网站的结构语义随着线索的呈现，使之成为一种标记语言而非编程语言；这是维基百科的解释，而我眼中的HTML则是一个容器，用来容纳各种我们需要展示的文字，图片，声音的容器。</p>
-<h1 id="HTML用来做什么？"><a href="#HTML用来做什么？" class="headerlink" title="HTML用来做什么？"></a>HTML用来做什么？</h1><p>它容纳了我们需要展示的文字、图片、声音，然后我们可以通过浏览器来查看它，（HTML是用来制作网站的。就这么简单！）</p>
-<h1 id="HTML怎么用？"><a href="#HTML怎么用？" class="headerlink" title="HTML怎么用？"></a>HTML怎么用？</h1><p>HTML分为很多种类，不同的类型装载不同的内容，比如说</p>
-<p><code>&lt;img&gt;</code>是用来容纳图片的</p>
-<p><code>&lt;p&gt;</code>是用来容纳文字的</p>
-<p><code>&lt;div&gt;</code>则是用来容纳前面所说的<code>&lt;img&gt;&lt;p&gt;</code>等的容器</p>
-<p>他们分工明确，你要做的只是像垃圾分类一样，把你需要展示给用户的内容放入对的容器，就是这么简单；<br>当然容器是有大小、颜色、姓名的 而这些你都可以控制，就是给你的容器添加你需要的属性：width、heigth、id等等；</p>
-<p>下面就是一段标准的HTML文档</p>
-<pre><code>    &lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;title&gt;我是标准的HTML模板，你可以放你要放的东西进来&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;div id=&quot;旺财&quot;&gt;
-&lt;img src=&quot;http://image.baidu.com&quot; alt=&quot;#&quot; style=&quot;width: 200px;height: 200px;&quot;&gt;
-&lt;p&gt;我的名字是旺财&lt;/p&gt;
-&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre><h1 id="HTML中需要注意的地方"><a href="#HTML中需要注意的地方" class="headerlink" title="HTML中需要注意的地方"></a>HTML中需要注意的地方</h1><p>你可以以多种不同的方式来编写HTML；同时，浏览器也可以以多种不同的方式来理解HTML。你可以认为<strong>HTML有很多种方言</strong>。这就是为什么某些网站会在不同的浏览器上显示出不同效果的原因。就像是不同的家庭拥有不同的容器，你尽量选择大家都有的容器来容纳你需要的内容。</p>
-<h1 id="HTML拓展"><a href="#HTML拓展" class="headerlink" title="HTML拓展"></a>HTML拓展</h1><p>XHTML是HTML的严格模式，怎么说呢，就像是规定了容器的名字必须是用小写字母写的（标签名小写）；<br>容器装了东西后必须盖好（标签必须关闭）；<br>容器与容器之间的关系必须正确，不能小容器装大容器，大容器的盖子盖到小容器上面等等（元素必须被正确地嵌套）<br>所有的容器必须放在一个架子上面（ 文档必须拥有根元素）</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/10/HTML/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-  
 
 
           </div>
@@ -487,8 +269,8 @@ Hello DOM
 		fancybox: undefined,
         mathjax: false,
         animate: false,
-        isHome: true,
-        isPost: false,
+        isHome: false,
+        isPost: true,
         isArchive: false,
         isTag: false,
         isCategory: false,
