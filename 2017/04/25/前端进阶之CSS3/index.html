@@ -6,14 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2017/4 | KoalaHui的博客</title>
+  <title>KoalaHui的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="前端进阶之CSS3 CSS3将CSS2.1完善一、特殊边框通过 CSS3，能够创建圆角边框，向矩形添加阴影，使用图片来绘制边框。 1、border-radius：创建圆角边框 div { border:2px solid; border-radius:25px; } 2、box-shadow：向矩形添加阴影 div { box-shadow: 10px 10px 5px #888888; } 3、">
+<meta name="keywords">
+<meta property="og:type" content="article">
 <meta property="og:title" content="KoalaHui的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2017/04/index.html">
+<meta property="og:url" content="http://yoursite.com/2017/04/25/前端进阶之CSS3/index.html">
 <meta property="og:site_name" content="KoalaHui的博客">
+<meta property="og:description" content="前端进阶之CSS3 CSS3将CSS2.1完善一、特殊边框通过 CSS3，能够创建圆角边框，向矩形添加阴影，使用图片来绘制边框。 1、border-radius：创建圆角边框 div { border:2px solid; border-radius:25px; } 2、box-shadow：向矩形添加阴影 div { box-shadow: 10px 10px 5px #888888; } 3、">
+<meta property="og:image" content="http://i.imgur.com/kkWLP1A.png">
+<meta property="og:image" content="http://i.imgur.com/bautrsN.gif">
+<meta property="og:image" content="http://i.imgur.com/9oBPJXF.png">
+<meta property="og:image" content="http://i.imgur.com/WG09CS0.png">
+<meta property="og:updated_time" content="2017-04-25T09:15:42.519Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="KoalaHui的博客">
+<meta name="twitter:description" content="前端进阶之CSS3 CSS3将CSS2.1完善一、特殊边框通过 CSS3，能够创建圆角边框，向矩形添加阴影，使用图片来绘制边框。 1、border-radius：创建圆角边框 div { border:2px solid; border-radius:25px; } 2、box-shadow：向矩形添加阴影 div { box-shadow: 10px 10px 5px #888888; } 3、">
+<meta name="twitter:image" content="http://i.imgur.com/kkWLP1A.png">
   
     <link rel="alternative" href="/atom.xml" title="KoalaHui的博客" type="application/atom+xml">
   
@@ -147,127 +157,287 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-前端进阶之CSS3" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="前端进阶之CSS3"><a href="#前端进阶之CSS3" class="headerlink" title="前端进阶之CSS3"></a>前端进阶之CSS3</h1><hr>
+<h1 id="CSS3将CSS2-1完善"><a href="#CSS3将CSS2-1完善" class="headerlink" title="CSS3将CSS2.1完善"></a>CSS3将CSS2.1完善</h1><h3 id="一、特殊边框"><a href="#一、特殊边框" class="headerlink" title="一、特殊边框"></a>一、特殊边框</h3><p>通过 CSS3，能够创建圆角边框，向矩形添加阴影，使用图片来绘制边框。</p>
+<p>1、border-radius：创建圆角边框</p>
+<pre><code>div
+{
+border:2px solid;
+border-radius:25px;
+}
+</code></pre><p>2、box-shadow：向矩形添加阴影</p>
+<pre><code>div
+{
+box-shadow: 10px 10px 5px #888888;
+}
+</code></pre><p>3、border-image：使用图片来绘制边框</p>
+<pre><code>div
+{
+border-image:url(border.png) 30 30 round;
+-webkit-border-image:url(border.png) 30 30 round; /* Safari 5 and older */
+-o-border-image:url(border.png) 30 30 round; /* Opera */
+}
+</code></pre><h3 id="二、背景"><a href="#二、背景" class="headerlink" title="二、背景"></a>二、背景</h3><p>1、背景属性 </p>
+<p><img src="http://i.imgur.com/kkWLP1A.png" alt=""></p>
+<p>2、background-size：背景图片的尺寸</p>
+<p>CSS3以前，背景图像大小由图像的实际大小决定。<br>CSS3中可以指定背景图片，让我们重新在不同的环境中指定背景图片的大小。您可以指定像素或百分比大小。</p>
+<pre><code>    div{ 
+background:url(img_flwr.gif); 
+background-size:80px 60px;
+ background-repeat:no-repeat; 
+}
+</code></pre><p>3、background-origin 属性规定背景图片的定位区域</p>
+<p>背景图片可以放置于<br>content-box、padding-box 或 border-box 区域。<br><img src="http://i.imgur.com/bautrsN.gif" alt=""></p>
+<pre><code>div{ 
+background:url(img_flwr.gif);
+background-repeat:no-repeat; 
+background-size:100% 100%; 
+background-origin:content-box; 
+}
+</code></pre><p>4、 background-clip背景剪裁属性是从指定位置开始绘制</p>
+<pre><code>#example1 { 
+border: 10px dotted black; 
+padding: 35px; 
+background: yellow; 
+background-clip: content-box; 
+}
+</code></pre><h3 id="三、文本效果"><a href="#三、文本效果" class="headerlink" title="三、文本效果"></a>三、文本效果</h3><pre><code>* text-shadow 属性适用于文本阴影
+* text-shadow: 5px 5px 5px #FF0000;
+* 指定了水平阴影，垂直阴影，模糊的距离，以及阴影的颜色
+
+* box-shadow 属性适用于盒子阴影
+* box-shadow: 10px 10px 5px #888888;
+
+* text-overflow 文本溢出属性指定应向用户如何显示溢出内容
+* text-overflow: clip/ ellipsis;
+
+* word-wrap 自动换行属性允许您强制文本换行 即使这意味着分裂它中间的一个字
+
+* word-break  单词拆分换行属性指定换行规则
+</code></pre><h3 id="四、多列"><a href="#四、多列" class="headerlink" title="四、多列"></a>四、多列</h3><p><strong>CSS3 可以将文本内容设计成像报纸一样的多列布局</strong></p>
+<p>column-count 属性指定了需要分割的列数</p>
+<pre><code>div {
+-webkit-column-count: 3; /* Chrome, Safari, Opera */
+-moz-column-count: 3; /* Firefox */
+column-count: 3;
+}
+</code></pre><p>column-gap 属性指定了列与列间的间隙</p>
+<pre><code>div {
+-webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+-moz-column-gap: 40px; /* Firefox */
+column-gap: 40px;
+}
+</code></pre><p>column-rule-style  属性指定了列与列间的边框样式</p>
+<pre><code>div {
+-webkit-column-rule-style: solid; /* Chrome, Safari, Opera */
+-moz-column-rule-style: solid; /* Firefox */
+column-rule-style: solid;
+}
+</code></pre><p>column-rule-width 属性指定了两列的边框厚度</p>
+<pre><code>div {
+-webkit-column-rule-width: 1px; /* Chrome, Safari, Opera */
+-moz-column-rule-width: 1px; /* Firefox */
+column-rule-width: 1px;
+}
+</code></pre><p>column-rule-color 属性指定了两列的边框颜色</p>
+<pre><code>div {
+-webkit-column-rule-color: lightblue; /* Chrome, Safari, Opera */
+-moz-column-rule-color: lightblue; /* Firefox */
+column-rule-color: lightblue;
+}
+</code></pre><p>column-rule 属性是 column-rule-* 所有属性的简写</p>
+<pre><code>div {
+-webkit-column-rule: 1px solid lightblue; /* Chrome, Safari, Opera */
+-moz-column-rule: 1px solid lightblue; /* Firefox */
+column-rule: 1px solid lightblue;
+}
+</code></pre><p>column-span指定元素跨越多少列</p>
+<pre><code>h2 {
+-webkit-column-span: all; /* Chrome, Safari, Opera */
+column-span: all;
+}
+</code></pre><p>column-width 属性指定了列的宽度</p>
+<pre><code>div {
+-webkit-column-width: 100px; /* Chrome, Safari, Opera */
+column-width: 100px;
+}
+</code></pre><h3 id="五、媒体查询-CSS2也有"><a href="#五、媒体查询-CSS2也有" class="headerlink" title="五、媒体查询(CSS2也有)"></a>五、媒体查询(CSS2也有)</h3><p><strong>针对不同媒体类型可以定制不同的样式规则</strong></p>
+<ul>
+<li>viewport(视窗) 的宽度与高度</li>
+<li>设备的宽度与高度</li>
+<li>朝向 (智能手机横屏，竖屏) 。</li>
+<li>分辨率</li>
+</ul>
+<pre><code>@media screen and (min-width: 480px) {
+
+body {
+background-color: lightgreen;
+}
+
+}
+</code></pre><p>这个例子是在屏幕可视窗口尺寸大于 480 像素的设备上修改背景颜色</p>
+<h1 id="CSS3将CSS2-1加强"><a href="#CSS3将CSS2-1加强" class="headerlink" title="CSS3将CSS2.1加强"></a>CSS3将CSS2.1加强</h1><h3 id="一、渐变"><a href="#一、渐变" class="headerlink" title="一、渐变"></a>一、渐变</h3><p>CSS3 渐变（gradients）可以让你在两个或多个指定的颜色之间显示平稳的过渡</p>
+<pre><code>* 线性渐变（Linear Gradients）- 向下/向上/向左/向右/对角方向
+* 径向渐变（Radial Gradients）- 由它们的中心定义
+</code></pre><h3 id="二-、2D转换"><a href="#二-、2D转换" class="headerlink" title="二 、2D转换"></a>二 、2D转换</h3><p><strong>CSS3转换，我们可以移动，比例化，反过来，旋转，和拉伸元素。</strong></p>
+<p>translate() 根据左(X轴)和顶部(Y轴)位置给定的参数，从当前元素位置移动。</p>
+<pre><code>div{
+transform: translate(50px,100px); 
+-ms-transform: translate(50px,100px); /* IE 9 */
+-webkit-transform: translate(50px,100px); /* Safari and Chrome */
+}
+</code></pre><p>rotate() 在一个给定度数顺时针旋转的元素。负值是允许的，这样是元素逆时针旋转。</p>
+<pre><code>div{
+transform: rotate(30deg);
+-ms-transform: rotate(30deg); /* IE 9 */
+-webkit-transform: rotate(30deg); /* Safari and Chrome */
+}
+</code></pre><p>scale() 该元素增加或减少的大小，取决于宽度（X轴）和高度（Y轴）的参数</p>
+<pre><code>-ms-transform:scale(2,3); /* IE 9 */
+-webkit-transform: scale(2,3); /* Safari */
+transform: scale(2,3); /* 标准语法 */
+</code></pre><p>skew()包含两个参数值，分别表示X轴和Y轴倾斜的角度，如果第二个参数为空，则默认为0，参数为负表示向相反方向倾斜。</p>
+<p>skewX(<angle>);表示只在X轴(水平方向)倾斜。</angle></p>
+<p>skewY(<angle>);表示只在Y轴(垂直方向)倾斜。</angle></p>
+<pre><code>div{
+transform: skew(30deg,20deg); 
+-ms-transform: skew(30deg,20deg); /* IE 9 */
+-webkit-transform: skew(30deg,20deg); /* Safari and Chrome */
+}
+</code></pre><p>matrix()<br>matrix()方法将2D变换方法合并成一个。<br>matrix 方法有六个参数，包含旋转，缩放，移动（平移）和倾斜功能</p>
+<pre><code>div{
+transform:matrix(0.866,0.5,-0.5,0.866,0,0); 
+-ms-transform:matrix(0.866,0.5,-0.5,0.866,0,0); /* IE 9 */
+-webkit-transform:matrix(0.866,0.5,-0.5,0.866,0,0); /* Safari and Chrome */
+}
+</code></pre><p><img src="http://i.imgur.com/9oBPJXF.png" alt=""></p>
+<h3 id="三-、3D转换"><a href="#三-、3D转换" class="headerlink" title="三 、3D转换"></a>三 、3D转换</h3><p><strong>CSS3 允许您使用 3D 转换来对元素进行格式化。</strong></p>
+<p>rotateX() 围绕其在一个给定度数X轴旋转的元素。</p>
+<pre><code>div{ 
+transform: rotateX(120deg);
+-webkit-transform: rotateX(120deg); /* Safari 与 Chrome */
+}
+</code></pre><p>rotateY() 围绕其在一个给定度数Y轴旋转的元素。</p>
+<pre><code>div{ 
+transform: rotateY(130deg); 
+-webkit-transform: rotateY(130deg); /* Safari 与 Chrome */
+}
+</code></pre><h3 id="四-、过渡"><a href="#四-、过渡" class="headerlink" title="四 、过渡"></a>四 、过渡</h3><p>CSS3 过渡是元素从一种样式逐渐改变为另一种的效果。</p>
+<ul>
+<li></li>
+<li>指定要添加效果的CSS属性</li>
+<li>指定效果的持续时间</li>
+</ul>
+<pre><code>div{ 
+transition: width 2s; 
+-webkit-transition: width 2s; /* Safari */
+}
+</code></pre><h3 id="五-、动画"><a href="#五-、动画" class="headerlink" title="五 、动画"></a>五 、动画</h3><p><strong>动画是使元素从一种样式逐渐变化为另一种样式的效果。</strong></p>
+<p><strong>您可以改变任意多的样式任意多的次数。</strong></p>
+<p>@keyframes规则是创建动画。 </p>
+<p>@keyframes规则内指定一个CSS样式和动画将逐步从目前的样式更改为新的样式</p>
+<p>把 “myfirst” 动画捆绑到 div 元素，时长：5 秒：</p>
+<pre><code>@keyframes myfirst{ 
+from {background: red;} 
+to {background: yellow;}
+} 
+
+@-webkit-keyframes myfirst /* Safari 与 Chrome */{ 
+from {background: red;} 
+to {background: yellow;}
+}
+div{ 
+animation: myfirst 5s; 
+-webkit-animation: myfirst 5s; /* Safari 与 Chrome */
+}
+</code></pre><p>请用百分比来规定变化发生的时间，或用关键词 “from” 和 “to”，等同于 0% 和 100%。</p>
+<p>0% 是动画的开始，100% 是动画的完成。</p>
+<p>为了得到最佳的浏览器支持，您应该始终定义 0% 和 100% 选择器。</p>
+<h3 id="六-、弹性盒子"><a href="#六-、弹性盒子" class="headerlink" title="六 、弹性盒子"></a>六 、弹性盒子</h3><p><strong>弹性盒子是 CSS3 的一种新的布局模式</strong><br>CSS3 弹性盒（ Flexible Box 或 flexbox），是一种当页面需要适应不同的屏幕大小以及设备类型时确保元素拥有恰当的行为的布局方式。</p>
+<p>引入弹性盒布局模型的目的是提供一种更加有效的方式来对一个容器中的子元素进行排列、对齐和分配空白空间。</p>
+<p>弹性盒子由弹性容器(Flex container)和弹性子元素(Flex item)组成。</p>
+<p>弹性容器通过设置 display 属性的值为 flex 或 inline-flex将其定义为弹性容器。</p>
+<p>弹性容器内包含了一个或多个弹性子元素。</p>
+<pre><code>   &lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+.flex-container { 
+display: -webkit-flex; 
+display: flex; 
+width: 400px; 
+height: 250px; 
+background-color: lightgrey; 
+} 
+.flex-item {
+background-color: cornflowerblue; 
+width: 100px; 
+height: 100px; 
+margin: 10px; 
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt; 
+    &lt;div class=&quot;flex-container&quot;&gt; 
+        &lt;div class=&quot;flex-item&quot;&gt;flex item 1&lt;/div&gt;
+        &lt;div class=&quot;flex-item&quot;&gt;flex item 2&lt;/div&gt;
+        &lt;div class=&quot;flex-item&quot;&gt;flex item 3&lt;/div&gt; 
+    &lt;/div&gt; 
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>flex-direction 顺序指定了弹性子元素在父容器中的位置。</p>
+<p>justify-content 应用在弹性容器上，把弹性项沿着弹性容器的主轴线（main axis）对齐</p>
+<p>align-items 设置或检索弹性盒子元素在侧轴（纵轴）方向上的对齐方式</p>
+<p>flex-wrap 属性用于指定弹性盒子的子元素换行方式。</p>
+<p>align-content 属性用于修改 flex-wrap 属性的行为。类似于 align-items, 但它不是设置弹性子元素的对齐，而是设置各个行的对齐<br><img src="http://i.imgur.com/WG09CS0.png" alt=""></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/25/前端进阶之CSS3/" class="archive-article-date">
-  	<time datetime="2017-04-25T09:16:22.420Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-25</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/17/前端基础之javascript/" class="archive-article-date">
-  	<time datetime="2017-04-17T09:12:59.899Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-17</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/12/前端基础之CSS/" class="archive-article-date">
-  	<time datetime="2017-04-12T09:03:52.292Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-12</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+<nav id="article-nav">
+  
+    <a href="/2017/04/17/前端基础之javascript/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+</nav>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/10/浏览器的运行原理/" class="archive-article-date">
-  	<time datetime="2017-04-10T08:40:21.837Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-10</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/10/HTML/" class="archive-article-date">
-  	<time datetime="2017-04-10T08:29:49.833Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-10</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
+
+
   
-  
-    </div></section>
+    <div class="duoshuo"></div>
   
 
-    
+
 
 
           </div>
@@ -292,8 +462,8 @@
         mathjax: false,
         animate: false,
         isHome: false,
-        isPost: false,
-        isArchive: true,
+        isPost: true,
+        isArchive: false,
         isTag: false,
         isCategory: false,
         open_in_new: false
