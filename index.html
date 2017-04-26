@@ -1,976 +1,1215 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
+<!doctype html>
+
+
+
   
-  <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>KoalaHui的博客</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+
+
+<html class="theme-next pisces use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="KoalaHui, Koala,Hui" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="KoalaHui的博客" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta property="og:type" content="website">
 <meta property="og:title" content="KoalaHui的博客">
 <meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="KoalaHui的博客">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="KoalaHui的博客">
-  
-    <link rel="alternative" href="/atom.xml" title="KoalaHui的博客" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  <link rel="stylesheet" type="text/css" href="/./main.234bc0.css">
-  <style type="text/css">
-  
-    #container.show {
-      background: linear-gradient(200deg,#a0cfe4,#e8c37e);
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
-  </style>
-  
+  };
+</script>
 
-  
 
+
+  <link rel="canonical" href="http://yoursite.com/"/>
+
+
+
+
+
+  <title>KoalaHui的博客</title>
 </head>
 
-<body>
-  <div id="container" q-class="show:isCtnShow">
-    <canvas id="anm-canvas" class="anm-canvas"></canvas>
-    <div class="left-col" q-class="show:isShow">
-      
-<div class="overlay" style="background: #4d4d4d"></div>
-<div class="intrude-less">
-	<header id="header" class="inner">
-		<a href="/" class="profilepic">
-			<img src="/img/logo.jpg" class="js-avatar show">
-		</a>
-		<hgroup>
-		  <h1 class="header-author"><a href="/">KoalaHui</a></h1>
-		</hgroup>
-		
+<body itemscope itemtype="http://schema.org/WebPage" lang="">
 
-		<nav class="header-menu">
-			<ul>
-			
-				<li><a href="/">主页</a></li>
-	        
-				<li><a href="/">前端基本功</a></li>
-	        
-				<li><a href="/tags/随笔/">随笔</a></li>
-	        
-			</ul>
-		</nav>
-		<nav class="header-smart-menu">
-    		
-    			
-    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
-    			
-            
-    			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
-    			
-            
-    			
-    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
-    			
-            
-		</nav>
-		<nav class="header-nav">
-			<div class="social">
-				
-					<a class="github" target="_blank" href="https://github.com/KoalaHui" title="github"><i class="icon-github"></i></a>
-		        
-					<a class="mail" target="_blank" href="mailto:koalaluhui@gmail.com" title="mail"><i class="icon-mail"></i></a>
-		        
-			</div>
-		</nav>
-	</header>		
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+   page-home 
+ ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">KoalaHui的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
 
-    </div>
-    <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
-      
-<nav id="mobile-nav">
-  	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
-	<div class="btnctn js-mobile-btnctn">
-  		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
-	</div>
-	<div class="intrude-less">
-		<header id="header" class="inner">
-			<div class="profilepic">
-				<img src="/img/logo.jpg" class="js-avatar show">
-			</div>
-			<hgroup>
-			  <h1 class="header-author js-header-author">KoalaHui</h1>
-			</hgroup>
-			
-			
-			
-				
-			
-				
-			
-				
-			
-			
-			
-			<nav class="header-nav">
-				<div class="social">
-					
-						<a class="github" target="_blank" href="https://github.com/KoalaHui" title="github"><i class="icon-github"></i></a>
-			        
-						<a class="mail" target="_blank" href="mailto:koalaluhui@gmail.com" title="mail"><i class="icon-mail"></i></a>
-			        
-				</div>
-			</nav>
+<nav class="site-nav">
+  
 
-			<nav class="header-menu js-header-menu">
-				<ul style="width: 70%">
-				
-				
-					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
-		        
-					<li style="width: 33.333333333333336%"><a href="/">前端基本功</a></li>
-		        
-					<li style="width: 33.333333333333336%"><a href="/tags/随笔/">随笔</a></li>
-		        
-				</ul>
-			</nav>
-		</header>				
-	</div>
-	<div class="mobile-mask" style="display:none" q-show="isShow"></div>
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Startseite
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archiv
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
 </nav>
 
-      <div id="wrapper" class="body-wrap">
-        <div class="menu-l">
-          <div class="canvas-wrap">
-            <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
-          </div>
-          <div id="js-content" class="content-ll">
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
             
-  
-    <article id="post-前端进阶之CSS3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  <section id="posts" class="posts-expand">
     
-    <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="前端进阶之CSS3"><a href="#前端进阶之CSS3" class="headerlink" title="前端进阶之CSS3"></a>前端进阶之CSS3</h1><hr>
-<h1 id="CSS3将CSS2-1完善"><a href="#CSS3将CSS2-1完善" class="headerlink" title="CSS3将CSS2.1完善"></a>CSS3将CSS2.1完善</h1><h3 id="一、特殊边框"><a href="#一、特殊边框" class="headerlink" title="一、特殊边框"></a>一、特殊边框</h3><p>通过 CSS3，能够创建圆角边框，向矩形添加阴影，使用图片来绘制边框。</p>
-<p>1、border-radius：创建圆角边框</p>
-<pre><code>div
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/25/前端进阶之CSS3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="KoalaHui">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="KoalaHui的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/25/前端进阶之CSS3/" itemprop="url">
+                  前端进阶之CSS3
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-25T17:16:22+08:00">
+                2017-04-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          
+CSS3将CSS2.1完善一、特殊边框通过 CSS3，能够创建圆角边框，向矩形添加阴影，使用图片来绘制边框。
+1、border-radius：创建圆角边框
+div
 {
 border:2px solid;
 border-radius:25px;
 }
-</code></pre><p>2、box-shadow：向矩形添加阴影</p>
-<pre><code>div
+2、box-shadow：向矩形添加阴影
+div
 {
 box-shadow: 10px 10px 5px #888888;
 }
-</code></pre><p>3、border-image：使用图片来绘制边框</p>
-<pre><code>div
+3、border-image：使用图片来绘制边框
+div
 {
 border-image:url(border.png) 30 30 round;
 -webkit-border-image:url(border.png) 30 30 round; /* Safari 5 and older */
 -o-border-image:url(border.png) 30 30 round; /* Opera */
 }
-</code></pre><h3 id="二、背景"><a href="#二、背景" class="headerlink" title="二、背景"></a>二、背景</h3><p>1、背景属性 </p>
-<p><img src="http://i.imgur.com/kkWLP1A.png" alt=""></p>
-<p>2、background-size：背景图片的尺寸</p>
-<p>CSS3以前，背景图像大小由图像的实际大小决定。<br>CSS3中可以指定背景图片，让我们重新在不同的环境中指定背景图片的大小。您可以指定像素或百分比大小。</p>
-<pre><code>    div{ 
-background:url(img_flwr.gif); 
-background-size:80px 60px;
- background-repeat:no-repeat; 
-}
-</code></pre><p>3、background-origin 属性规定背景图片的定位区域</p>
-<p>背景图片可以放置于<br>content-box、padding-box 或 border-box 区域。<br><img src="http://i.imgur.com/bautrsN.gif" alt=""></p>
-<pre><code>div{ 
-background:url(img_flwr.gif);
-background-repeat:no-repeat; 
-background-size:100% 100%; 
-background-origin:content-box; 
-}
-</code></pre><p>4、 background-clip背景剪裁属性是从指定位置开始绘制</p>
-<pre><code>#example1 { 
-border: 10px dotted black; 
-padding: 35px; 
-background: yellow; 
-background-clip: content-box; 
-}
-</code></pre><h3 id="三、文本效果"><a href="#三、文本效果" class="headerlink" title="三、文本效果"></a>三、文本效果</h3><pre><code>* text-shadow 属性适用于文本阴影
-* text-shadow: 5px 5px 5px #FF0000;
-* 指定了水平阴影，垂直阴影，模糊的距离，以及阴影的颜色
+二、背景1、背景属性 
 
-* box-shadow 属性适用于盒子阴影
-* box-shadow: 10px 10px 5px #888888;
-
-* text-overflow 文本溢出属性指定应向用户如何显示溢出内容
-* text-overflow: clip/ ellipsis;
-
-* word-wrap 自动换行属性允许您强制文本换行 即使这意味着分裂它中间的一个字
-
-* word-break  单词拆分换行属性指定换行规则
-</code></pre><h3 id="四、多列"><a href="#四、多列" class="headerlink" title="四、多列"></a>四、多列</h3><p><strong>CSS3 可以将文本内容设计成像报纸一样的多列布局</strong></p>
-<p>column-count 属性指定了需要分割的列数</p>
-<pre><code>div {
--webkit-column-count: 3; /* Chrome, Safari, Opera */
--moz-column-count: 3; /* Firefox */
-column-count: 3;
-}
-</code></pre><p>column-gap 属性指定了列与列间的间隙</p>
-<pre><code>div {
--webkit-column-gap: 40px; /* Chrome, Safari, Opera */
--moz-column-gap: 40px; /* Firefox */
-column-gap: 40px;
-}
-</code></pre><p>column-rule-style  属性指定了列与列间的边框样式</p>
-<pre><code>div {
--webkit-column-rule-style: solid; /* Chrome, Safari, Opera */
--moz-column-rule-style: solid; /* Firefox */
-column-rule-style: solid;
-}
-</code></pre><p>column-rule-width 属性指定了两列的边框厚度</p>
-<pre><code>div {
--webkit-column-rule-width: 1px; /* Chrome, Safari, Opera */
--moz-column-rule-width: 1px; /* Firefox */
-column-rule-width: 1px;
-}
-</code></pre><p>column-rule-color 属性指定了两列的边框颜色</p>
-<pre><code>div {
--webkit-column-rule-color: lightblue; /* Chrome, Safari, Opera */
--moz-column-rule-color: lightblue; /* Firefox */
-column-rule-color: lightblue;
-}
-</code></pre><p>column-rule 属性是 column-rule-* 所有属性的简写</p>
-<pre><code>div {
--webkit-column-rule: 1px solid lightblue; /* Chrome, Safari, Opera */
--moz-column-rule: 1px solid lightblue; /* Firefox */
-column-rule: 1px solid lightblue;
-}
-</code></pre><p>column-span指定元素跨越多少列</p>
-<pre><code>h2 {
--webkit-column-span: all; /* Chrome, Safari, Opera */
-column-span: all;
-}
-</code></pre><p>column-width 属性指定了列的宽度</p>
-<pre><code>div {
--webkit-column-width: 100px; /* Chrome, Safari, Opera */
-column-width: 100px;
-}
-</code></pre><h3 id="五、媒体查询-CSS2也有"><a href="#五、媒体查询-CSS2也有" class="headerlink" title="五、媒体查询(CSS2也有)"></a>五、媒体查询(CSS2也有)</h3><p><strong>针对不同媒体类型可以定制不同的样式规则</strong></p>
-<ul>
-<li>viewport(视窗) 的宽度与高度</li>
-<li>设备的宽度与高度</li>
-<li>朝向 (智能手机横屏，竖屏) 。</li>
-<li>分辨率</li>
-</ul>
-<pre><code>@media screen and (min-width: 480px) {
-
-body {
-background-color: lightgreen;
-}
-
-}
-</code></pre><p>这个例子是在屏幕可视窗口尺寸大于 480 像素的设备上修改背景颜色</p>
-<h1 id="CSS3将CSS2-1加强"><a href="#CSS3将CSS2-1加强" class="headerlink" title="CSS3将CSS2.1加强"></a>CSS3将CSS2.1加强</h1><h3 id="一、渐变"><a href="#一、渐变" class="headerlink" title="一、渐变"></a>一、渐变</h3><p>CSS3 渐变（gradients）可以让你在两个或多个指定的颜色之间显示平稳的过渡</p>
-<pre><code>* 线性渐变（Linear Gradients）- 向下/向上/向左/向右/对角方向
-* 径向渐变（Radial Gradients）- 由它们的中心定义
-</code></pre><h3 id="二-、2D转换"><a href="#二-、2D转换" class="headerlink" title="二 、2D转换"></a>二 、2D转换</h3><p><strong>CSS3转换，我们可以移动，比例化，反过来，旋转，和拉伸元素。</strong></p>
-<p>translate() 根据左(X轴)和顶部(Y轴)位置给定的参数，从当前元素位置移动。</p>
-<pre><code>div{
-transform: translate(50px,100px); 
--ms-transform: translate(50px,100px); /* IE 9 */
--webkit-transform: translate(50px,100px); /* Safari and Chrome */
-}
-</code></pre><p>rotate() 在一个给定度数顺时针旋转的元素。负值是允许的，这样是元素逆时针旋转。</p>
-<pre><code>div{
-transform: rotate(30deg);
--ms-transform: rotate(30deg); /* IE 9 */
--webkit-transform: rotate(30deg); /* Safari and Chrome */
-}
-</code></pre><p>scale() 该元素增加或减少的大小，取决于宽度（X轴）和高度（Y轴）的参数</p>
-<pre><code>-ms-transform:scale(2,3); /* IE 9 */
--webkit-transform: scale(2,3); /* Safari */
-transform: scale(2,3); /* 标准语法 */
-</code></pre><p>skew()包含两个参数值，分别表示X轴和Y轴倾斜的角度，如果第二个参数为空，则默认为0，参数为负表示向相反方向倾斜。</p>
-<p>skewX(<angle>);表示只在X轴(水平方向)倾斜。</angle></p>
-<p>skewY(<angle>);表示只在Y轴(垂直方向)倾斜。</angle></p>
-<pre><code>div{
-transform: skew(30deg,20deg); 
--ms-transform: skew(30deg,20deg); /* IE 9 */
--webkit-transform: skew(30deg,20deg); /* Safari and Chrome */
-}
-</code></pre><p>matrix()<br>matrix()方法将2D变换方法合并成一个。<br>matrix 方法有六个参数，包含旋转，缩放，移动（平移）和倾斜功能</p>
-<pre><code>div{
-transform:matrix(0.866,0.5,-0.5,0.866,0,0); 
--ms-transform:matrix(0.866,0.5,-0.5,0.866,0,0); /* IE 9 */
--webkit-transform:matrix(0.866,0.5,-0.5,0.866,0,0); /* Safari and Chrome */
-}
-</code></pre><p><img src="http://i.imgur.com/9oBPJXF.png" alt=""></p>
-<h3 id="三-、3D转换"><a href="#三-、3D转换" class="headerlink" title="三 、3D转换"></a>三 、3D转换</h3><p><strong>CSS3 允许您使用 3D 转换来对元素进行格式化。</strong></p>
-<p>rotateX() 围绕其在一个给定度数X轴旋转的元素。</p>
-<pre><code>div{ 
-transform: rotateX(120deg);
--webkit-transform: rotateX(120deg); /* Safari 与 Chrome */
-}
-</code></pre><p>rotateY() 围绕其在一个给定度数Y轴旋转的元素。</p>
-<pre><code>div{ 
-transform: rotateY(130deg); 
--webkit-transform: rotateY(130deg); /* Safari 与 Chrome */
-}
-</code></pre><h3 id="四-、过渡"><a href="#四-、过渡" class="headerlink" title="四 、过渡"></a>四 、过渡</h3><p>CSS3 过渡是元素从一种样式逐渐改变为另一种的效果。</p>
-<ul>
-<li></li>
-<li>指定要添加效果的CSS属性</li>
-<li>指定效果的持续时间</li>
-</ul>
-<pre><code>div{ 
-transition: width 2s; 
--webkit-transition: width 2s; /* Safari */
-}
-</code></pre><h3 id="五-、动画"><a href="#五-、动画" class="headerlink" title="五 、动画"></a>五 、动画</h3><p><strong>动画是使元素从一种样式逐渐变化为另一种样式的效果。</strong></p>
-<p><strong>您可以改变任意多的样式任意多的次数。</strong></p>
-<p>@keyframes规则是创建动画。 </p>
-<p>@keyframes规则内指定一个CSS样式和动画将逐步从目前的样式更改为新的样式</p>
-<p>把 “myfirst” 动画捆绑到 div 元素，时长：5 秒：</p>
-<pre><code>@keyframes myfirst{ 
-from {background: red;} 
-to {background: yellow;}
-} 
-
-@-webkit-keyframes myfirst /* Safari 与 Chrome */{ 
-from {background: red;} 
-to {background: yellow;}
-}
-div{ 
-animation: myfirst 5s; 
--webkit-animation: myfirst 5s; /* Safari 与 Chrome */
-}
-</code></pre><p>请用百分比来规定变化发生的时间，或用关键词 “from” 和 “to”，等同于 0% 和 100%。</p>
-<p>0% 是动画的开始，100% 是动画的完成。</p>
-<p>为了得到最佳的浏览器支持，您应该始终定义 0% 和 100% 选择器。</p>
-<h3 id="六-、弹性盒子"><a href="#六-、弹性盒子" class="headerlink" title="六 、弹性盒子"></a>六 、弹性盒子</h3><p><strong>弹性盒子是 CSS3 的一种新的布局模式</strong><br>CSS3 弹性盒（ Flexible Box 或 flexbox），是一种当页面需要适应不同的屏幕大小以及设备类型时确保元素拥有恰当的行为的布局方式。</p>
-<p>引入弹性盒布局模型的目的是提供一种更加有效的方式来对一个容器中的子元素进行排列、对齐和分配空白空间。</p>
-<p>弹性盒子由弹性容器(Flex container)和弹性子元素(Flex item)组成。</p>
-<p>弹性容器通过设置 display 属性的值为 flex 或 inline-flex将其定义为弹性容器。</p>
-<p>弹性容器内包含了一个或多个弹性子元素。</p>
-<pre><code>   &lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;style&gt;
-.flex-container { 
-display: -webkit-flex; 
-display: flex; 
-width: 400px; 
-height: 250px; 
-background-color: lightgrey; 
-} 
-.flex-item {
-background-color: cornflowerblue; 
-width: 100px; 
-height: 100px; 
-margin: 10px; 
-}
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt; 
-    &lt;div class=&quot;flex-container&quot;&gt; 
-        &lt;div class=&quot;flex-item&quot;&gt;flex item 1&lt;/div&gt;
-        &lt;div class=&quot;flex-item&quot;&gt;flex item 2&lt;/div&gt;
-        &lt;div class=&quot;flex-item&quot;&gt;flex item 3&lt;/div&gt; 
-    &lt;/div&gt; 
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre><p>flex-direction 顺序指定了弹性子元素在父容器中的位置。</p>
-<p>justify-content 应用在弹性容器上，把弹性项沿着弹性容器的主轴线（main axis）对齐</p>
-<p>align-items 设置或检索弹性盒子元素在侧轴（纵轴）方向上的对齐方式</p>
-<p>flex-wrap 属性用于指定弹性盒子的子元素换行方式。</p>
-<p>align-content 属性用于修改 flex-wrap 属性的行为。类似于 align-items, 但它不是设置弹性子元素的对齐，而是设置各个行的对齐<br><img src="http://i.imgur.com/WG09CS0.png" alt=""></p>
-
-      
-
+2、background-size：背景图片的尺寸
+CSS3以前，背景图像大小由图像的实际大小决定。CSS3中可以指定背景图片，让我们重新在不同的环境中指定背景图片的大小。您可以指定
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/04/25/前端进阶之CSS3/#more" rel="contents">
+              Weiterlesen &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
       
     </div>
-    <div class="article-info article-info-index">
-      
-      
-      
 
+    <div>
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/25/前端进阶之CSS3/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
     </div>
-  </div>
-</article>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
 
 
-
-
-
-
-
-
-  
-    <article id="post-前端基础之javascript" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
     
-    <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="前端基础之javascript"><a href="#前端基础之javascript" class="headerlink" title="前端基础之javascript"></a>前端基础之javascript</h1><hr>
-<h1 id="javascript是什么？"><a href="#javascript是什么？" class="headerlink" title="javascript是什么？"></a>javascript是什么？</h1><p><strong>目前所有主流浏览器上唯一支持的脚本语言，Brendan Eich于1995年花了十天设计出来；</strong></p>
-<h4 id="完整的JavaScript包括以下几个部分："><a href="#完整的JavaScript包括以下几个部分：" class="headerlink" title="完整的JavaScript包括以下几个部分："></a>完整的JavaScript包括以下几个部分：</h4><ul>
-<li><p>ECMAScript，描述了该语言的语法和基本对象</p>
-</li>
-<li><p>文档对象模型（DOM），描述处理网页内容的方法和接口</p>
-</li>
-<li><p>浏览器对象模型（BOM），描述与浏览器进行交互的方法和接口</p>
-</li>
-</ul>
-<hr>
-<h1 id="javascript用来干什么？"><a href="#javascript用来干什么？" class="headerlink" title="javascript用来干什么？"></a>javascript用来干什么？</h1><ul>
-<li>嵌入动态文本于HTML页面</li>
-<li>对浏览器事件作出响应</li>
-<li>读写HTML元素</li>
-<li>在数据被提交到服务器之前验证数据</li>
-<li>检测访客的浏览器信息</li>
-<li>控制cookies，包括创建和修改等</li>
-</ul>
-<hr>
-<h1 id="javascript的发展"><a href="#javascript的发展" class="headerlink" title="javascript的发展"></a>javascript的发展</h1><p><strong>起初</strong>，javascript只是设计用来做页面的表单验证、操作HTML的DOM和浏览器等功能（由于当时的表单验证需要将整个页面提交到服务器，服务器发现表单中有一些数据不符合规则，则将错误返回到客户端让用户重新填写后再提交到服务器，这样一来一回就浪费了很多时间资源），javascript的设计者由于不满公司使用java为原型来设计javascript的决定，就随便用十天将javascript写出来了，这导致了javascript很多细节考虑的不够严谨;</p>
-<p><strong>加强</strong>，javascript拥有操作HTML的DOM和浏览器的功能，但这都只是本地的一些操作，它没法像java 那样访问网络， 也就没有办法调用服务器端的接口来获取数据。这样导致的问题是，当页面中有一些内容需要改变，哪怕是页面中的一个文字的改变，我们都要刷新整个页面；后面IE5引入了一个新的功能XHR(XMLHttpRequest),这个新功能弥补了javascript上面的缺陷，使javascript 拥有了调用服务器接口的能力，这样通过接口获取到数据以后，再操作DOM，这样就不用每次去更新整个页面了;</p>
-<p><strong>优化</strong>，当时的服务器接口返回的数据都是用XML格式的，比如：</p>
-<p>&gt;<br>    <book>   </book></p>
-<blockquote>
-<pre><code>&lt;isbn&gt;978-7-229-03093-3&lt;/isbn&gt;
-
-&lt;name&gt;三体&lt;/name&gt;   
-
-&lt;author&gt;刘慈欣&lt;/author&gt;  
-
-&lt;introduction&gt;中国最牛的科幻书&lt;/introduction&gt;  
-
-&lt;price&gt;38.00&lt;/price&gt;
-
-&lt;/book&gt;
-</code></pre><p>#<br> 在这段数据中真正的数据很少， 标签（像<code>&lt;name&gt;</code>这样的）反而占了大头。后来有人发现了这个问题，并且在使用javascript的时候，javascript中不是有一个对象的东西吗，比如：<br>var book = {</p>
-<p>“isbn”: “978-7-229-03093-3”,</p>
-<p>“name”: “三体”,</p>
-<p>“author”: “刘慈欣”,</p>
-<p>“introduction”: “中国最牛的科幻书”,</p>
-<p>“price”: “38.00” }</p>
-</blockquote>
-<p>这种数据结构很好的表达了之前XML中的数据，并且这种结构出自javascript，所以不用解析可以直接拿来用，直接提升了传输速度及展示速度。</p>
-<p><strong>野心</strong>，既然javascript可以自己访问网络，操作DOM来改变页面结构及展示效果，那么是不是再给javascript添加一个操作数据库的功能，它就能上天啦，确实有人这样做了（ Ryan Dahl），这个人发明了NODEJS，将javascript移植到了服务器端，现在已经很多网站都开始使用node.js来作为后台开发语言。</p>
-<p><strong>到目前为止，javascript的确可以在服务器端立足，并且有一个巨大的优势：前端和后端都用同样的开发语言：那就是 javascript。</strong></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/17/前端基础之javascript/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
 
   
-    <article id="post-前端基础之CSS" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/17/前端基础之javascript/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="KoalaHui">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="KoalaHui的博客">
+    </span>
+
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="前端基础之CSS"><a href="#前端基础之CSS" class="headerlink" title="前端基础之CSS"></a>前端基础之CSS</h1><p>在学习css之前，我们需要对HTML的知识有基本的了解！请查看我的上一篇博客<a href="https://koalahui.github.io/2017/04/10/HTML/" target="_blank" rel="external">前端基础之HTML</a></p>
-<h2 id="CSS是什么？"><a href="#CSS是什么？" class="headerlink" title="CSS是什么？"></a>CSS是什么？</h2><p>CSS就是一种叫做样式表（style sheet）的技术。也有的人称之为层叠样式表（Cascading Style Sheet）。</p>
-<h2 id="CSS的用来做什么的"><a href="#CSS的用来做什么的" class="headerlink" title="CSS的用来做什么的?"></a>CSS的用来做什么的?</h2><ol>
-<li>CSS就是用来修饰HTML</li>
-<li>在网页开发中采用CSS技术，可以有效地对页面的布局、字体、颜色、背景和其它效果实现更加精确的控制。</li>
-<li>以前一些非得通过图片转换实现的功能，现在只要用CSS就可以轻松实现，从而更快地下载页面。</li>
-<li>使页面的字体变得更漂亮，更容易编排，使页面真正赏心悦目。</li>
-<li>你可以轻松地控制页面的布局 。</li>
-</ol>
-<h2 id="CSS怎么用？"><a href="#CSS怎么用？" class="headerlink" title="CSS怎么用？"></a>CSS怎么用？</h2><p>CSS必须结合HTML来用（就像是衣服如果没有人来穿，再好看放着也是无用的东西）</p>
-<h3 id="首先，HTML与CSS的结合方式"><a href="#首先，HTML与CSS的结合方式" class="headerlink" title="首先，HTML与CSS的结合方式"></a>首先，HTML与CSS的结合方式</h3><p> <strong>1、style属性方式（内联样式）</strong></p>
-<blockquote>
-<p>适合局部修改<br>*<code>&lt;font style=&quot;font-size:150px;color: red;&quot;&gt;
-今天天气好晴朗&lt;/font&gt;</code></p>
-</blockquote>
-<p><strong>2、style标签方式：（内嵌样式）</strong></p>
-<blockquote>
-<p><code>&lt;style&gt;&lt;/style&gt;</code>存在于head标签之中的</p>
-<p>例如：<br>    <code>&lt;style type=&quot;text/css&quot;&gt;font{font-size:150px;color: red; }&lt;/style&gt;</code><br>页面的多个标签统一设置。</p>
-</blockquote>
-<p><strong>3、链接方式（外部样式最常用的方式）</strong>                          </p>
-<blockquote>
-<p>格式： <code>&lt;link rel=&quot;stylesheet&quot;  type=&quot;text/css&quot;  href=&quot;CSS文件路径&quot;/&gt;</code><br>存在于<head>标签中</head></p>
-</blockquote>
-<h3 id="然后，HTML标签与CSS样式的绑定"><a href="#然后，HTML标签与CSS样式的绑定" class="headerlink" title="然后，HTML标签与CSS样式的绑定"></a>然后，HTML标签与CSS样式的绑定</h3><p>如何将指定的CSS样式作用于特定的HTML标签上呢，这就轮到我们的CSS选择器登场了。</p>
-<blockquote>
-<p>CSS选择器：你可以将它看作是一把钥匙，当找到匹配的锁就会将锁打开</p>
-</blockquote>
-<h3 id="CSS选择器可以分为："><a href="#CSS选择器可以分为：" class="headerlink" title="CSS选择器可以分为："></a>CSS选择器可以分为：</h3><p><strong>1、元素选择器</strong> </p>
-<blockquote>
-<p>就是把HTML标签名作为选择器名称</p>
-<p>格式： 标签名 {}</p>
-</blockquote>
-<p><strong>2、类选择器</strong>      </p>
-<blockquote>
-<p>样式格式：  .class名{}</p>
-<p>标签格式： </p><p class="”class名”"></p><p></p>
-<p>能设置不同标签的相同样式</p>
-</blockquote>
-<p><strong>3、Id选择器</strong></p>
-<blockquote>
-<p>样式格式：  #id名{}</p>
-<p>标签格式：<pid=”id名”></pid=”id名”></p><p></p>
-<p>有针对性地设置样式</p>
-</blockquote>
-<p><strong>4、属性选择器</strong></p>
-<blockquote>
-<p>根据标签名和标签的属性名以及属性值来选择</p>
-<p>样式格式：标签名[属性名称=’属性值’]</p>
-</blockquote>
-<p><strong>5、伪元素选择器</strong></p>
-<blockquote>
-<p>HTML预定义的选择器</p>
-<p>格式：标签名:选择器{}</p>
-<p>选择器名称为 HTML标签的状态。例如：a:link{}表示链接标签在未访问过 时的样式。</p>
-</blockquote>
-<p><strong>这篇文章只是粗略的介绍了一下CSS，下面我将会写一系列的有关CSS的文章，敬请期待……</strong></p>
+      <header class="post-header">
 
-      
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/17/前端基础之javascript/" itemprop="url">
+                  前端基础之javascript
+                </a>
+              
+            
+          </h1>
+        
 
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-17T17:12:59+08:00">
+                2017-04-17
+              </time>
+            
 
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/12/前端基础之CSS/">展开全文 >></a>
-        </p>
-      
+            
 
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
+            
+          </span>
 
+          
 
+          
+            
+          
 
+          
+          
 
+          
 
+          
 
+          
 
-
-  
-    <article id="post-浏览器的运行原理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+        </div>
+      </header>
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="前端基础之浏览器运行原理"><a href="#前端基础之浏览器运行原理" class="headerlink" title="前端基础之浏览器运行原理"></a>前端基础之浏览器运行原理</h1><p>##前言</p>
-<hr>
-<p>作为一名前端工程师我们有必要知道浏览器是怎样将我们写的HTML、CSS以及JS转换成我们眼睛所见到的花花绿绿的文字及图片的。这也是我《前端系统性学习》专栏的开篇第一讲，后面还会有一系列的基础或一些深究原理的文章，欢迎大家关注。</p>
-<p>##正文</p>
-<hr>
-<p>###<strong>1、思考问题： 从输入 URL 到页面加载完成的过程中都发生了什么事情？</strong></p>
-<ol>
-<li>输入地址</li>
-<li>浏览器查找域名的IP地址</li>
-<li>浏览器向web服务器发送一个HTTP请求</li>
-<li>服务器的永久重定向响应</li>
-<li>浏览器跟踪重定向地址</li>
-<li>服务器处理请求</li>
-<li>服务器返回一个 响应</li>
-<li>浏览器显示HTML</li>
-<li>浏览器发送请求获取嵌入在HTML中的资源（如图片、音频、视频、CSS、js等等）</li>
-<li>浏览器发送异步请求</li>
-</ol>
-<p>###<strong>2、作为一个前端，我们将问题聚焦于后面的两点浏览器显示HTML、浏览器发送请求获取嵌入在HTML中的资源（如图片、音频、视频、CSS、js等等）浏览器为了完成这两步骤到底发生了什么？</strong></p>
-<p>####2.1首先我们先来了解下浏览器的组成</p>
-<p> <img src="http://img.blog.csdn.net/20170406152053970?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjk5NTg2NTU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="图片来自网络"></p>
-<pre><code>* 用户界面：定义了一些常用的浏览器组件，比如地址栏，返回、书签等等
-* 数据持久化：指浏览器的cookie、local storage等组件
-* 浏览器引擎：平台应用的相关接口，在用户界面和呈现引擎之间传送指令。
-* 渲染引擎：处理HTML、CSS的解析与渲染
-* JavaScript解释器：解析和执行JavaScript代码
-* UI后端：指浏览器的的图形库等
-* 网络：用于网络调用，比如HTTP请求
-</code></pre><p>####2.2接下来我们来看看浏览器渲染页面的主流程<br>当我们在浏览器的地址栏输入了url（用户界面），浏览器引擎通知渲染引擎调用网络API实现HTTP请求，当服务器返回一个响应后，渲染引擎开始工作<br>下面是在取得内容之后的基本流程：<br>解析html以构建dom树-&gt;构建render树-&gt;布局render树-&gt;绘制render树</p>
-<p>   <img src="http://img.blog.csdn.net/20170406152533000?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjk5NTg2NTU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="图片来自网络"></p>
-<p>渲染引擎开始解析html，并将标签转化为内容树中的dom节点。接着，它解析外部CSS文件及style标签中的样式信息。这些样式信息以及html中的可见性指令将被用来构建另一棵树——render树。<br>Render树由一些包含有颜色和大小等属性的矩形组成，它们将被按照正确的顺序显示到屏幕上。<br>Render树构建好了之后，将会执行布局过程，它将确定每个节点在屏幕上的确切坐标（layout\reflow）。再下一步就是绘制，即遍历render树，并使用UI后端层绘制每个节点。</p>
-<p>###<strong>3、DOM解析、CSS解析、渲染</strong></p>
-<p>####3.1DOM解析<br>HTML的解析分为两个过程，词法解析和语法解析。词法解析就是将整个HTML文档拆分成一个一个标签，而语法解析就是列出这一个个标签之间的关系。下面就是HTML文档完成解析转成的DOM树：</p>
-<pre><code>&lt;html&gt;
-&lt;body&gt;
-&lt;p&gt;
-Hello DOM
-&lt;/p&gt;
-&lt;div&gt;&lt;img src=”example.png” /&gt;&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre><p><img src="http://img.blog.csdn.net/20170406152948989?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjk5NTg2NTU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="（图片来自网络）"></p>
-<p>####3.2CSS解析<br>将css文件解析为样式表对象。该对象包含css规则，该规则包含选择器和声明对象。</p>
-<p>####3.3渲染<br><img src="http://img.blog.csdn.net/20170406153338475?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjk5NTg2NTU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>#####3.3.1、计算CSS样式<br>计算CSS样式其实就是将CSS样式绑定到DOM节点上的过程， CSS匹配DOM Tree主要是从右到左解析CSS的选择器， CSS匹配HTML元素是一个相当复杂和有性能问题的事情。所以，DOM树要小，CSS尽量用id和class选择器，千万不要过渡层叠下去，并且在最右边千万别写*通配符。</p>
-<p>#####3.3.2、构建render树<br>构建render树就是将上面计算好的CSS样式和render Tree关联起来</p>
-<p>#####3.3.3、layout（定位标签在页面中的位置）<br>将上面两步构建好的render Tree包含了位置、颜色、大小等信息，layout就是通过编译这些信息将DOM节点摆放到页面中对应的位置</p>
-<p>#####3.3.4、paint  （绘制元素）<br>确定好位置我们就要使用我们的UI组件来将形形色色的内容颜色具体的表现形式paint出来展示给大家了<br>值得注意的是在layout和paint的过程中有两个很重要的概念：<br><strong>Reflow</strong>:字面意思是重新流程，我们需要去重新验证并计算Render Tree，这样就涉及到整个页面的修改，极好性能，所以我们在做性能优化的时候就是尽可能的让浏览器少Reflow<br><strong>Repaint</strong>:字面意思是重新绘制，我们需要重画屏幕的一部分页面，但是不需要去重新验证并计算Render Tree,这样不会有那么大的性能损耗</p>
+
+    <div class="post-body" itemprop="articleBody">
 
       
+      
 
+      
+        
+          
+          
+javascript是什么？目前所有主流浏览器上唯一支持的脚本语言，Brendan Eich于1995年花了十天设计出来；
+完整的JavaScript包括以下几个部分：
+ECMAScript，描述了该语言的语法和基本对象
+
+文档对象模型（DOM），描述处理网页内容的方法和接口
+
+浏览器对象模型（BOM），描述与浏览器进行交互的方法和接口
+
+
+
+javascript用来干什么？
+嵌入动态文本于HTML页面
+对浏览器事件作出响应
+读写HTML元素
+在数据被提交到服务器之前验证数据
+检测访客的浏览器信息
+控制cookies，包括创建和修改等
+
+
+javascript的发展起初，javascript只是设计用来做页面的表单验证、操作HTML的DOM和浏览器等功能（由于当时的表单验证需要将整个页面提交到服务器，服务器发现表单中有一些数据不符合规则，则将错误返回到客户端让用户重新填写后再提交到服务器，这样一来一回就浪费了很多时间资源），javascript的设计者由于不满公司使用java为原型来设计javascript的决定，就随便用十天将javascript写出来了，这导致了javascrip
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/04/17/前端基础之javascript/#more" rel="contents">
+              Weiterlesen &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
       
     </div>
-    <div class="article-info article-info-index">
-      
-      
-      
 
+    <div>
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/10/浏览器的运行原理/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
     </div>
-  </div>
-</article>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
 
 
-
-
-
-
-
-
-  
-    <article id="post-HTML" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
     
-    <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="前端基础之HTML"><a href="#前端基础之HTML" class="headerlink" title="前端基础之HTML"></a>前端基础之HTML</h1><h1 id="HTML是什么？"><a href="#HTML是什么？" class="headerlink" title="HTML是什么？"></a>HTML是什么？</h1><p>HTML(Hyper Text Markup Language超文本标记语言 ) 是一种基础技术，常与CSS、JavaScript一起被众多网站用于设计令人赏心悦目的网页、网页应用程序以及移动应用程序的用户界面。 网页浏览器可以读取HTML文件，并将其渲染成可视化网页。 HTML描述了一个网站的结构语义随着线索的呈现，使之成为一种标记语言而非编程语言；这是维基百科的解释，而我眼中的HTML则是一个容器，用来容纳各种我们需要展示的文字，图片，声音的容器。</p>
-<h1 id="HTML用来做什么？"><a href="#HTML用来做什么？" class="headerlink" title="HTML用来做什么？"></a>HTML用来做什么？</h1><p>它容纳了我们需要展示的文字、图片、声音，然后我们可以通过浏览器来查看它，（HTML是用来制作网站的。就这么简单！）</p>
-<h1 id="HTML怎么用？"><a href="#HTML怎么用？" class="headerlink" title="HTML怎么用？"></a>HTML怎么用？</h1><p>HTML分为很多种类，不同的类型装载不同的内容，比如说</p>
-<p><code>&lt;img&gt;</code>是用来容纳图片的</p>
-<p><code>&lt;p&gt;</code>是用来容纳文字的</p>
-<p><code>&lt;div&gt;</code>则是用来容纳前面所说的<code>&lt;img&gt;&lt;p&gt;</code>等的容器</p>
-<p>他们分工明确，你要做的只是像垃圾分类一样，把你需要展示给用户的内容放入对的容器，就是这么简单；<br>当然容器是有大小、颜色、姓名的 而这些你都可以控制，就是给你的容器添加你需要的属性：width、heigth、id等等；</p>
-<p>下面就是一段标准的HTML文档</p>
-<pre><code>    &lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;title&gt;我是标准的HTML模板，你可以放你要放的东西进来&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;div id=&quot;旺财&quot;&gt;
-&lt;img src=&quot;http://image.baidu.com&quot; alt=&quot;#&quot; style=&quot;width: 200px;height: 200px;&quot;&gt;
-&lt;p&gt;我的名字是旺财&lt;/p&gt;
-&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre><h1 id="HTML中需要注意的地方"><a href="#HTML中需要注意的地方" class="headerlink" title="HTML中需要注意的地方"></a>HTML中需要注意的地方</h1><p>你可以以多种不同的方式来编写HTML；同时，浏览器也可以以多种不同的方式来理解HTML。你可以认为<strong>HTML有很多种方言</strong>。这就是为什么某些网站会在不同的浏览器上显示出不同效果的原因。就像是不同的家庭拥有不同的容器，你尽量选择大家都有的容器来容纳你需要的内容。</p>
-<h1 id="HTML拓展"><a href="#HTML拓展" class="headerlink" title="HTML拓展"></a>HTML拓展</h1><p>XHTML是HTML的严格模式，怎么说呢，就像是规定了容器的名字必须是用小写字母写的（标签名小写）；<br>容器装了东西后必须盖好（标签必须关闭）；<br>容器与容器之间的关系必须正确，不能小容器装大容器，大容器的盖子盖到小容器上面等等（元素必须被正确地嵌套）<br>所有的容器必须放在一个架子上面（ 文档必须拥有根元素）</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/10/HTML/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
 
   
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/12/前端基础之CSS/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="KoalaHui">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="KoalaHui的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/12/前端基础之CSS/" itemprop="url">
+                  前端基础之CSS
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-12T17:03:52+08:00">
+                2017-04-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          在学习css之前，我们需要对HTML的知识有基本的了解！请查看我的上一篇博客前端基础之HTML
+CSS是什么？CSS就是一种叫做样式表（style sheet）的技术。也有的人称之为层叠样式表（Cascading Style Sheet）。
+CSS的用来做什么的?
+CSS就是用来修饰HTML
+在网页开发中采用CSS技术，可以有效地对页面的布局、字体、颜色、背景和其它效果实现更加精确的控制。
+以前一些非得通过图片转换实现的功能，现在只要用CSS就可以轻松实现，从而更快地下载页面。
+使页面的字体变得更漂亮，更容易编排，使页面真正赏心悦目。
+你可以轻松地控制页面的布局 。
+
+CSS怎么用？CSS必须结合HTML来用（就像是衣服如果没有人来穿，再好看放着也是无用的东西）
+首先，HTML与CSS的结合方式 1、style属性方式（内联样式）
+
+适合局部修改*&lt;font style=&quot;font-size:150px;color: red;&quot;&gt;
+今天天气好晴朗&lt;/font&gt;
+
+2、style标签方式：（内嵌样式）
+
+&lt;style&gt;&lt;/st
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/04/12/前端基础之CSS/#more" rel="contents">
+              Weiterlesen &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/10/浏览器的运行原理/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="KoalaHui">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="KoalaHui的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/10/浏览器的运行原理/" itemprop="url">
+                  前端基础之浏览器运行原理
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-10T16:40:21+08:00">
+                2017-04-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          ##前言
+
+作为一名前端工程师我们有必要知道浏览器是怎样将我们写的HTML、CSS以及JS转换成我们眼睛所见到的花花绿绿的文字及图片的。这也是我《前端系统性学习》专栏的开篇第一讲，后面还会有一系列的基础或一些深究原理的文章，欢迎大家关注。
+##正文
+
+###1、思考问题： 从输入 URL 到页面加载完成的过程中都发生了什么事情？
+
+输入地址
+浏览器查找域名的IP地址
+浏览器向web服务器发送一个HTTP请求
+服务器的永久重定向响应
+浏览器跟踪重定向地址
+服务器处理请求
+服务器返回一个 响应
+浏览器显示HTML
+浏览器发送请求获取嵌入在HTML中的资源（如图片、音频、视频、CSS、js等等）
+浏览器发送异步请求
+
+###2、作为一个前端，我们将问题聚焦于后面的两点浏览器显示HTML、浏览器发送请求获取嵌入在HTML中的资源（如图片、音频、视频、CSS、js等等）浏览器为了完成这两步骤到底发生了什么？
+####2.1首先我们先来了解下浏览器的组成
+ 
+* 用户界面：定义了一些常用的浏览器组件，比如地址栏，返回、书签等等
+* 数据持久化：指浏览器的cookie、local storage等组
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/04/10/浏览器的运行原理/#more" rel="contents">
+              Weiterlesen &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/10/HTML/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="KoalaHui">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="KoalaHui的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/10/HTML/" itemprop="url">
+                  前端基础之HTML
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-10T16:29:49+08:00">
+                2017-04-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><img src="http://i.imgur.com/gndNOPY.jpg" alt=""><br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/04/10/HTML/#more" rel="contents">
+              Weiterlesen &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+  </section>
+
   
 
 
           </div>
+          
+
+
+          
+
         </div>
-      </div>
-      <footer id="footer">
-  <div class="outer">
-    <div id="footer-info">
-    	<div class="footer-left">
-    		&copy; 2017 KoalaHui
-    	</div>
-      	<div class="footer-right">
-      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
-      	</div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
     </div>
   </div>
-</footer>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="KoalaHui" />
+          <p class="site-author-name" itemprop="name">KoalaHui</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">Artikel</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
     </div>
-    <script>
-	var yiliaConfig = {
-		fancybox: undefined,
-        mathjax: false,
-        animate: false,
-        isHome: true,
-        isPost: false,
-        isArchive: false,
-        isTag: false,
-        isCategory: false,
-        open_in_new: false
-	}
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">KoalaHui</span>
+</div>
+
+
+<div class="powered-by">
+  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
 </script>
 
-<script>!function(t){function n(r){if(e[r])return e[r].exports;var o=e[r]={exports:{},id:r,loaded:!1};return t[r].call(o.exports,o,o.exports,n),o.loaded=!0,o.exports}var e={};return n.m=t,n.c=e,n.p="./",n(0)}([function(t,n,e){"use strict";function r(t){return t&&t.__esModule?t:{default:t}}function o(t,n){var e=/\/|index.html/g;return t.replace(e,"")===n.replace(e,"")}function i(){for(var t=document.querySelectorAll(".js-header-menu li a"),n=window.location.pathname,e=0,r=t.length;e<r;e++){var i=t[e];o(n,i.getAttribute("href"))&&(0,d.default)(i,"active")}}function u(t){for(var n=t.offsetLeft,e=t.offsetParent;null!==e;)n+=e.offsetLeft,e=e.offsetParent;return n}function f(t){for(var n=t.offsetTop,e=t.offsetParent;null!==e;)n+=e.offsetTop,e=e.offsetParent;return n}function c(t,n,e,r,o){var i=u(t),c=f(t)-n;if(c-e<=o){var a=t.$newDom;a||(a=t.cloneNode(!0),(0,h.default)(t,a),t.$newDom=a,a.style.position="fixed",a.style.top=(e||c)+"px",a.style.left=i+"px",a.style.zIndex=r||2,a.style.width="100%",a.style.color="#fff"),a.style.visibility="visible",t.style.visibility="hidden"}else{t.style.visibility="visible";var s=t.$newDom;s&&(s.style.visibility="hidden")}}function a(){var t=document.querySelector(".js-overlay"),n=document.querySelector(".js-header-menu");c(t,document.body.scrollTop,-63,2,0),c(n,document.body.scrollTop,1,3,0)}function s(){document.querySelector("#container").addEventListener("scroll",function(t){a()}),window.addEventListener("scroll",function(t){a()}),a()}function l(){x.default.versions.mobile&&window.screen.width<800&&(i(),s())}var p=e(71),d=r(p),v=e(72),y=(r(v),e(84)),h=r(y),b=e(69),x=r(b),m=e(75),g=r(m),w=e(70);l(),(0,w.addLoadEvent)(function(){g.default.init()}),t.exports={}},function(t,n){var e=t.exports="undefined"!=typeof window&&window.Math==Math?window:"undefined"!=typeof self&&self.Math==Math?self:Function("return this")();"number"==typeof __g&&(__g=e)},function(t,n){var e={}.hasOwnProperty;t.exports=function(t,n){return e.call(t,n)}},function(t,n,e){var r=e(49),o=e(15);t.exports=function(t){return r(o(t))}},function(t,n,e){t.exports=!e(8)(function(){return 7!=Object.defineProperty({},"a",{get:function(){return 7}}).a})},function(t,n,e){var r=e(6),o=e(12);t.exports=e(4)?function(t,n,e){return r.f(t,n,o(1,e))}:function(t,n,e){return t[n]=e,t}},function(t,n,e){var r=e(10),o=e(30),i=e(24),u=Object.defineProperty;n.f=e(4)?Object.defineProperty:function(t,n,e){if(r(t),n=i(n,!0),r(e),o)try{return u(t,n,e)}catch(t){}if("get"in e||"set"in e)throw TypeError("Accessors not supported!");return"value"in e&&(t[n]=e.value),t}},function(t,n,e){var r=e(22)("wks"),o=e(13),i=e(1).Symbol,u="function"==typeof i,f=t.exports=function(t){return r[t]||(r[t]=u&&i[t]||(u?i:o)("Symbol."+t))};f.store=r},function(t,n){t.exports=function(t){try{return!!t()}catch(t){return!0}}},function(t,n,e){var r=e(35),o=e(16);t.exports=Object.keys||function(t){return r(t,o)}},function(t,n,e){var r=e(11);t.exports=function(t){if(!r(t))throw TypeError(t+" is not an object!");return t}},function(t,n){t.exports=function(t){return"object"==typeof t?null!==t:"function"==typeof t}},function(t,n){t.exports=function(t,n){return{enumerable:!(1&t),configurable:!(2&t),writable:!(4&t),value:n}}},function(t,n){var e=0,r=Math.random();t.exports=function(t){return"Symbol(".concat(void 0===t?"":t,")_",(++e+r).toString(36))}},function(t,n){var e=t.exports={version:"2.4.0"};"number"==typeof __e&&(__e=e)},function(t,n){t.exports=function(t){if(void 0==t)throw TypeError("Can't call method on  "+t);return t}},function(t,n){t.exports="constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf".split(",")},function(t,n){t.exports={}},function(t,n){t.exports=!0},function(t,n){n.f={}.propertyIsEnumerable},function(t,n,e){var r=e(6).f,o=e(2),i=e(7)("toStringTag");t.exports=function(t,n,e){t&&!o(t=e?t:t.prototype,i)&&r(t,i,{configurable:!0,value:n})}},function(t,n,e){var r=e(22)("keys"),o=e(13);t.exports=function(t){return r[t]||(r[t]=o(t))}},function(t,n,e){var r=e(1),o="__core-js_shared__",i=r[o]||(r[o]={});t.exports=function(t){return i[t]||(i[t]={})}},function(t,n){var e=Math.ceil,r=Math.floor;t.exports=function(t){return isNaN(t=+t)?0:(t>0?r:e)(t)}},function(t,n,e){var r=e(11);t.exports=function(t,n){if(!r(t))return t;var e,o;if(n&&"function"==typeof(e=t.toString)&&!r(o=e.call(t)))return o;if("function"==typeof(e=t.valueOf)&&!r(o=e.call(t)))return o;if(!n&&"function"==typeof(e=t.toString)&&!r(o=e.call(t)))return o;throw TypeError("Can't convert object to primitive value")}},function(t,n,e){var r=e(1),o=e(14),i=e(18),u=e(26),f=e(6).f;t.exports=function(t){var n=o.Symbol||(o.Symbol=i?{}:r.Symbol||{});"_"==t.charAt(0)||t in n||f(n,t,{value:u.f(t)})}},function(t,n,e){n.f=e(7)},function(t,n,e){var r=e(1),o=e(14),i=e(46),u=e(5),f="prototype",c=function(t,n,e){var a,s,l,p=t&c.F,d=t&c.G,v=t&c.S,y=t&c.P,h=t&c.B,b=t&c.W,x=d?o:o[n]||(o[n]={}),m=x[f],g=d?r:v?r[n]:(r[n]||{})[f];d&&(e=n);for(a in e)s=!p&&g&&void 0!==g[a],s&&a in x||(l=s?g[a]:e[a],x[a]=d&&"function"!=typeof g[a]?e[a]:h&&s?i(l,r):b&&g[a]==l?function(t){var n=function(n,e,r){if(this instanceof t){switch(arguments.length){case 0:return new t;case 1:return new t(n);case 2:return new t(n,e)}return new t(n,e,r)}return t.apply(this,arguments)};return n[f]=t[f],n}(l):y&&"function"==typeof l?i(Function.call,l):l,y&&((x.virtual||(x.virtual={}))[a]=l,t&c.R&&m&&!m[a]&&u(m,a,l)))};c.F=1,c.G=2,c.S=4,c.P=8,c.B=16,c.W=32,c.U=64,c.R=128,t.exports=c},function(t,n){var e={}.toString;t.exports=function(t){return e.call(t).slice(8,-1)}},function(t,n,e){var r=e(11),o=e(1).document,i=r(o)&&r(o.createElement);t.exports=function(t){return i?o.createElement(t):{}}},function(t,n,e){t.exports=!e(4)&&!e(8)(function(){return 7!=Object.defineProperty(e(29)("div"),"a",{get:function(){return 7}}).a})},function(t,n,e){"use strict";var r=e(18),o=e(27),i=e(36),u=e(5),f=e(2),c=e(17),a=e(51),s=e(20),l=e(58),p=e(7)("iterator"),d=!([].keys&&"next"in[].keys()),v="@@iterator",y="keys",h="values",b=function(){return this};t.exports=function(t,n,e,x,m,g,w){a(e,n,x);var O,S,_,j=function(t){if(!d&&t in A)return A[t];switch(t){case y:return function(){return new e(this,t)};case h:return function(){return new e(this,t)}}return function(){return new e(this,t)}},P=n+" Iterator",E=m==h,M=!1,A=t.prototype,T=A[p]||A[v]||m&&A[m],L=T||j(m),N=m?E?j("entries"):L:void 0,C="Array"==n?A.entries||T:T;if(C&&(_=l(C.call(new t)),_!==Object.prototype&&(s(_,P,!0),r||f(_,p)||u(_,p,b))),E&&T&&T.name!==h&&(M=!0,L=function(){return T.call(this)}),r&&!w||!d&&!M&&A[p]||u(A,p,L),c[n]=L,c[P]=b,m)if(O={values:E?L:j(h),keys:g?L:j(y),entries:N},w)for(S in O)S in A||i(A,S,O[S]);else o(o.P+o.F*(d||M),n,O);return O}},function(t,n,e){var r=e(10),o=e(55),i=e(16),u=e(21)("IE_PROTO"),f=function(){},c="prototype",a=function(){var t,n=e(29)("iframe"),r=i.length,o="<",u=">";for(n.style.display="none",e(48).appendChild(n),n.src="javascript:",t=n.contentWindow.document,t.open(),t.write(o+"script"+u+"document.F=Object"+o+"/script"+u),t.close(),a=t.F;r--;)delete a[c][i[r]];return a()};t.exports=Object.create||function(t,n){var e;return null!==t?(f[c]=r(t),e=new f,f[c]=null,e[u]=t):e=a(),void 0===n?e:o(e,n)}},function(t,n,e){var r=e(35),o=e(16).concat("length","prototype");n.f=Object.getOwnPropertyNames||function(t){return r(t,o)}},function(t,n){n.f=Object.getOwnPropertySymbols},function(t,n,e){var r=e(2),o=e(3),i=e(45)(!1),u=e(21)("IE_PROTO");t.exports=function(t,n){var e,f=o(t),c=0,a=[];for(e in f)e!=u&&r(f,e)&&a.push(e);for(;n.length>c;)r(f,e=n[c++])&&(~i(a,e)||a.push(e));return a}},function(t,n,e){t.exports=e(5)},function(t,n,e){var r=e(15);t.exports=function(t){return Object(r(t))}},function(t,n,e){t.exports={default:e(41),__esModule:!0}},function(t,n,e){t.exports={default:e(42),__esModule:!0}},function(t,n,e){"use strict";function r(t){return t&&t.__esModule?t:{default:t}}n.__esModule=!0;var o=e(39),i=r(o),u=e(38),f=r(u),c="function"==typeof f.default&&"symbol"==typeof i.default?function(t){return typeof t}:function(t){return t&&"function"==typeof f.default&&t.constructor===f.default&&t!==f.default.prototype?"symbol":typeof t};n.default="function"==typeof f.default&&"symbol"===c(i.default)?function(t){return"undefined"==typeof t?"undefined":c(t)}:function(t){return t&&"function"==typeof f.default&&t.constructor===f.default&&t!==f.default.prototype?"symbol":"undefined"==typeof t?"undefined":c(t)}},function(t,n,e){e(65),e(63),e(66),e(67),t.exports=e(14).Symbol},function(t,n,e){e(64),e(68),t.exports=e(26).f("iterator")},function(t,n){t.exports=function(t){if("function"!=typeof t)throw TypeError(t+" is not a function!");return t}},function(t,n){t.exports=function(){}},function(t,n,e){var r=e(3),o=e(61),i=e(60);t.exports=function(t){return function(n,e,u){var f,c=r(n),a=o(c.length),s=i(u,a);if(t&&e!=e){for(;a>s;)if(f=c[s++],f!=f)return!0}else for(;a>s;s++)if((t||s in c)&&c[s]===e)return t||s||0;return!t&&-1}}},function(t,n,e){var r=e(43);t.exports=function(t,n,e){if(r(t),void 0===n)return t;switch(e){case 1:return function(e){return t.call(n,e)};case 2:return function(e,r){return t.call(n,e,r)};case 3:return function(e,r,o){return t.call(n,e,r,o)}}return function(){return t.apply(n,arguments)}}},function(t,n,e){var r=e(9),o=e(34),i=e(19);t.exports=function(t){var n=r(t),e=o.f;if(e)for(var u,f=e(t),c=i.f,a=0;f.length>a;)c.call(t,u=f[a++])&&n.push(u);return n}},function(t,n,e){t.exports=e(1).document&&document.documentElement},function(t,n,e){var r=e(28);t.exports=Object("z").propertyIsEnumerable(0)?Object:function(t){return"String"==r(t)?t.split(""):Object(t)}},function(t,n,e){var r=e(28);t.exports=Array.isArray||function(t){return"Array"==r(t)}},function(t,n,e){"use strict";var r=e(32),o=e(12),i=e(20),u={};e(5)(u,e(7)("iterator"),function(){return this}),t.exports=function(t,n,e){t.prototype=r(u,{next:o(1,e)}),i(t,n+" Iterator")}},function(t,n){t.exports=function(t,n){return{value:n,done:!!t}}},function(t,n,e){var r=e(9),o=e(3);t.exports=function(t,n){for(var e,i=o(t),u=r(i),f=u.length,c=0;f>c;)if(i[e=u[c++]]===n)return e}},function(t,n,e){var r=e(13)("meta"),o=e(11),i=e(2),u=e(6).f,f=0,c=Object.isExtensible||function(){return!0},a=!e(8)(function(){return c(Object.preventExtensions({}))}),s=function(t){u(t,r,{value:{i:"O"+ ++f,w:{}}})},l=function(t,n){if(!o(t))return"symbol"==typeof t?t:("string"==typeof t?"S":"P")+t;if(!i(t,r)){if(!c(t))return"F";if(!n)return"E";s(t)}return t[r].i},p=function(t,n){if(!i(t,r)){if(!c(t))return!0;if(!n)return!1;s(t)}return t[r].w},d=function(t){return a&&v.NEED&&c(t)&&!i(t,r)&&s(t),t},v=t.exports={KEY:r,NEED:!1,fastKey:l,getWeak:p,onFreeze:d}},function(t,n,e){var r=e(6),o=e(10),i=e(9);t.exports=e(4)?Object.defineProperties:function(t,n){o(t);for(var e,u=i(n),f=u.length,c=0;f>c;)r.f(t,e=u[c++],n[e]);return t}},function(t,n,e){var r=e(19),o=e(12),i=e(3),u=e(24),f=e(2),c=e(30),a=Object.getOwnPropertyDescriptor;n.f=e(4)?a:function(t,n){if(t=i(t),n=u(n,!0),c)try{return a(t,n)}catch(t){}if(f(t,n))return o(!r.f.call(t,n),t[n])}},function(t,n,e){var r=e(3),o=e(33).f,i={}.toString,u="object"==typeof window&&window&&Object.getOwnPropertyNames?Object.getOwnPropertyNames(window):[],f=function(t){try{return o(t)}catch(t){return u.slice()}};t.exports.f=function(t){return u&&"[object Window]"==i.call(t)?f(t):o(r(t))}},function(t,n,e){var r=e(2),o=e(37),i=e(21)("IE_PROTO"),u=Object.prototype;t.exports=Object.getPrototypeOf||function(t){return t=o(t),r(t,i)?t[i]:"function"==typeof t.constructor&&t instanceof t.constructor?t.constructor.prototype:t instanceof Object?u:null}},function(t,n,e){var r=e(23),o=e(15);t.exports=function(t){return function(n,e){var i,u,f=String(o(n)),c=r(e),a=f.length;return c<0||c>=a?t?"":void 0:(i=f.charCodeAt(c),i<55296||i>56319||c+1===a||(u=f.charCodeAt(c+1))<56320||u>57343?t?f.charAt(c):i:t?f.slice(c,c+2):(i-55296<<10)+(u-56320)+65536)}}},function(t,n,e){var r=e(23),o=Math.max,i=Math.min;t.exports=function(t,n){return t=r(t),t<0?o(t+n,0):i(t,n)}},function(t,n,e){var r=e(23),o=Math.min;t.exports=function(t){return t>0?o(r(t),9007199254740991):0}},function(t,n,e){"use strict";var r=e(44),o=e(52),i=e(17),u=e(3);t.exports=e(31)(Array,"Array",function(t,n){this._t=u(t),this._i=0,this._k=n},function(){var t=this._t,n=this._k,e=this._i++;return!t||e>=t.length?(this._t=void 0,o(1)):"keys"==n?o(0,e):"values"==n?o(0,t[e]):o(0,[e,t[e]])},"values"),i.Arguments=i.Array,r("keys"),r("values"),r("entries")},function(t,n){},function(t,n,e){"use strict";var r=e(59)(!0);e(31)(String,"String",function(t){this._t=String(t),this._i=0},function(){var t,n=this._t,e=this._i;return e>=n.length?{value:void 0,done:!0}:(t=r(n,e),this._i+=t.length,{value:t,done:!1})})},function(t,n,e){"use strict";var r=e(1),o=e(2),i=e(4),u=e(27),f=e(36),c=e(54).KEY,a=e(8),s=e(22),l=e(20),p=e(13),d=e(7),v=e(26),y=e(25),h=e(53),b=e(47),x=e(50),m=e(10),g=e(3),w=e(24),O=e(12),S=e(32),_=e(57),j=e(56),P=e(6),E=e(9),M=j.f,A=P.f,T=_.f,L=r.Symbol,N=r.JSON,C=N&&N.stringify,k="prototype",F=d("_hidden"),q=d("toPrimitive"),I={}.propertyIsEnumerable,B=s("symbol-registry"),D=s("symbols"),W=s("op-symbols"),H=Object[k],K="function"==typeof L,R=r.QObject,J=!R||!R[k]||!R[k].findChild,U=i&&a(function(){return 7!=S(A({},"a",{get:function(){return A(this,"a",{value:7}).a}})).a})?function(t,n,e){var r=M(H,n);r&&delete H[n],A(t,n,e),r&&t!==H&&A(H,n,r)}:A,G=function(t){var n=D[t]=S(L[k]);return n._k=t,n},$=K&&"symbol"==typeof L.iterator?function(t){return"symbol"==typeof t}:function(t){return t instanceof L},z=function(t,n,e){return t===H&&z(W,n,e),m(t),n=w(n,!0),m(e),o(D,n)?(e.enumerable?(o(t,F)&&t[F][n]&&(t[F][n]=!1),e=S(e,{enumerable:O(0,!1)})):(o(t,F)||A(t,F,O(1,{})),t[F][n]=!0),U(t,n,e)):A(t,n,e)},Y=function(t,n){m(t);for(var e,r=b(n=g(n)),o=0,i=r.length;i>o;)z(t,e=r[o++],n[e]);return t},Q=function(t,n){return void 0===n?S(t):Y(S(t),n)},X=function(t){var n=I.call(this,t=w(t,!0));return!(this===H&&o(D,t)&&!o(W,t))&&(!(n||!o(this,t)||!o(D,t)||o(this,F)&&this[F][t])||n)},V=function(t,n){if(t=g(t),n=w(n,!0),t!==H||!o(D,n)||o(W,n)){var e=M(t,n);return!e||!o(D,n)||o(t,F)&&t[F][n]||(e.enumerable=!0),e}},Z=function(t){for(var n,e=T(g(t)),r=[],i=0;e.length>i;)o(D,n=e[i++])||n==F||n==c||r.push(n);return r},tt=function(t){for(var n,e=t===H,r=T(e?W:g(t)),i=[],u=0;r.length>u;)!o(D,n=r[u++])||e&&!o(H,n)||i.push(D[n]);return i};K||(L=function(){if(this instanceof L)throw TypeError("Symbol is not a constructor!");var t=p(arguments.length>0?arguments[0]:void 0),n=function(e){this===H&&n.call(W,e),o(this,F)&&o(this[F],t)&&(this[F][t]=!1),U(this,t,O(1,e))};return i&&J&&U(H,t,{configurable:!0,set:n}),G(t)},f(L[k],"toString",function(){return this._k}),j.f=V,P.f=z,e(33).f=_.f=Z,e(19).f=X,e(34).f=tt,i&&!e(18)&&f(H,"propertyIsEnumerable",X,!0),v.f=function(t){return G(d(t))}),u(u.G+u.W+u.F*!K,{Symbol:L});for(var nt="hasInstance,isConcatSpreadable,iterator,match,replace,search,species,split,toPrimitive,toStringTag,unscopables".split(","),et=0;nt.length>et;)d(nt[et++]);for(var nt=E(d.store),et=0;nt.length>et;)y(nt[et++]);u(u.S+u.F*!K,"Symbol",{for:function(t){return o(B,t+="")?B[t]:B[t]=L(t)},keyFor:function(t){if($(t))return h(B,t);throw TypeError(t+" is not a symbol!")},useSetter:function(){J=!0},useSimple:function(){J=!1}}),u(u.S+u.F*!K,"Object",{create:Q,defineProperty:z,defineProperties:Y,getOwnPropertyDescriptor:V,getOwnPropertyNames:Z,getOwnPropertySymbols:tt}),N&&u(u.S+u.F*(!K||a(function(){var t=L();return"[null]"!=C([t])||"{}"!=C({a:t})||"{}"!=C(Object(t))})),"JSON",{stringify:function(t){if(void 0!==t&&!$(t)){for(var n,e,r=[t],o=1;arguments.length>o;)r.push(arguments[o++]);return n=r[1],"function"==typeof n&&(e=n),!e&&x(n)||(n=function(t,n){if(e&&(n=e.call(this,t,n)),!$(n))return n}),r[1]=n,C.apply(N,r)}}}),L[k][q]||e(5)(L[k],q,L[k].valueOf),l(L,"Symbol"),l(Math,"Math",!0),l(r.JSON,"JSON",!0)},function(t,n,e){e(25)("asyncIterator")},function(t,n,e){e(25)("observable")},function(t,n,e){e(62);for(var r=e(1),o=e(5),i=e(17),u=e(7)("toStringTag"),f=["NodeList","DOMTokenList","MediaList","StyleSheetList","CSSRuleList"],c=0;c<5;c++){var a=f[c],s=r[a],l=s&&s.prototype;l&&!l[u]&&o(l,u,a),i[a]=i.Array}},function(t,n){"use strict";var e={versions:function(){var t=window.navigator.userAgent;return{trident:t.indexOf("Trident")>-1,presto:t.indexOf("Presto")>-1,webKit:t.indexOf("AppleWebKit")>-1,gecko:t.indexOf("Gecko")>-1&&t.indexOf("KHTML")==-1,mobile:!!t.match(/AppleWebKit.*Mobile.*/),ios:!!t.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),android:t.indexOf("Android")>-1||t.indexOf("Linux")>-1,iPhone:t.indexOf("iPhone")>-1||t.indexOf("Mac")>-1,iPad:t.indexOf("iPad")>-1,webApp:t.indexOf("Safari")==-1,weixin:t.indexOf("MicroMessenger")==-1}}()};t.exports=e},function(t,n,e){"use strict";function r(t){return t&&t.__esModule?t:{default:t}}var o=e(40),i=r(o),u=function(){function t(t,n,e){return n||e?String.fromCharCode(n||e):o[t]||t}function n(t){return l[t]}var e=/&quot;|&lt;|&gt;|&amp;|&nbsp;|&apos;|&#(\d+);|&#(\d+)/g,r=/['<> "&]/g,o={"&quot;":'"',"&lt;":"<","&gt;":">","&amp;":"&","&nbsp;":" "},f=/\u00a0/g,c=/<br\s*\/?>/gi,a=/\r?\n/g,s=/\s/g,l={};for(var p in o)l[o[p]]=p;return o["&apos;"]="'",l["'"]="&#39;",{encode:function(t){return t?(""+t).replace(r,n).replace(a,"<br/>").replace(s,"&nbsp;"):""},decode:function(n){return n?(""+n).replace(c,"\n").replace(e,t).replace(f," "):""},encodeBase16:function(t){if(!t)return t;t+="";for(var n=[],e=0,r=t.length;r>e;e++)n.push(t.charCodeAt(e).toString(16).toUpperCase());return n.join("")},encodeBase16forJSON:function(t){if(!t)return t;t=t.replace(/[\u4E00-\u9FBF]/gi,function(t){return escape(t).replace("%u","\\u")});for(var n=[],e=0,r=t.length;r>e;e++)n.push(t.charCodeAt(e).toString(16).toUpperCase());return n.join("")},decodeBase16:function(t){if(!t)return t;t+="";for(var n=[],e=0,r=t.length;r>e;e+=2)n.push(String.fromCharCode("0x"+t.slice(e,e+2)));return n.join("")},encodeObject:function(t){if(t instanceof Array)for(var n=0,e=t.length;e>n;n++)t[n]=u.encodeObject(t[n]);else if("object"==("undefined"==typeof t?"undefined":(0,i.default)(t)))for(var r in t)t[r]=u.encodeObject(t[r]);else if("string"==typeof t)return u.encode(t);return t},loadScript:function(t){var n=document.createElement("script");document.getElementsByTagName("body")[0].appendChild(n),n.setAttribute("src",t)},addLoadEvent:function(t){var n=window.onload;"function"!=typeof window.onload?window.onload=t:window.onload=function(){n(),t()}}}}();t.exports=u},function(t,n){function e(t,n){t.classList?t.classList.add(n):t.className+=" "+n}t.exports=e},function(t,n){function e(t,n){if(t.classList)t.classList.remove(n);else{var e=new RegExp("(^|\\b)"+n.split(" ").join("|")+"(\\b|$)","gi");t.className=t.className.replace(e," ")}}t.exports=e},,,function(t,n){"use strict";function e(){var t=document.querySelector("#page-nav");if(t&&!document.querySelector("#page-nav .extend.prev")&&(t.innerHTML='<a class="extend prev disabled" rel="prev">&laquo; Prev</a>'+t.innerHTML),t&&!document.querySelector("#page-nav .extend.next")&&(t.innerHTML=t.innerHTML+'<a class="extend next disabled" rel="next">Next &raquo;</a>'),yiliaConfig&&yiliaConfig.open_in_new){var n=document.querySelectorAll(".article-entry a:not(.article-more-a)");n.forEach(function(t){t.setAttribute("target","_blank")})}var e=document.querySelector("#js-aboutme");e&&0!==e.length&&(e.innerHTML=e.innerText)}t.exports={init:e}},,,,,,,,,function(t,n){function e(t,n){if("string"==typeof n)return t.insertAdjacentHTML("afterend",n);var e=t.nextSibling;return e?t.parentNode.insertBefore(n,e):t.parentNode.appendChild(n)}t.exports=e}])</script><script src="/./main.234bc0.js"></script><script>!function(){var e=function(e){var t=document.createElement("script");document.getElementsByTagName("body")[0].appendChild(t),t.setAttribute("src",e)};e("/slider.885efe.js")}()</script>
 
 
-    
-<div class="tools-col" q-class="show:isShow,hide:isShow|isFalse" q-on="click:stop(e)">
-  <div class="tools-nav header-menu">
-    
-    
-      
-      
-      
-    
-      
-      
-      
-    
-      
-      
-      
-    
-    
 
-    <ul style="width: 70%">
-    
-    
-      
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
-      
-        
-      
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
-      
-        
-      
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
-      
-        
-    </ul>
-  </div>
-  <div class="tools-wrap">
-    
-    	<section class="tools-section tools-section-all" q-show="innerArchive">
-        <div class="search-wrap">
-          <input class="search-ipt" q-model="search" type="text" placeholder="find something…">
-          <i class="icon-search icon" q-show="search|isEmptyStr"></i>
-          <i class="icon-close icon" q-show="search|isNotEmptyStr" q-on="click:clearChose(e)"></i>
-        </div>
-        <div class="widget tagcloud search-tag">
-          <p class="search-tag-wording">tag:</p>
-          <label class="search-switch">
-            <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
-          </label>
-          <ul class="article-tag-list" q-show="showTags">
-            
-            <div class="clearfix"></div>
-          </ul>
-        </div>
-        <ul class="search-ul">
-          <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
-            缺失模块。<br/>1、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
-            2、在根目录_config.yml里添加配置：
-<pre style="font-size: 12px;" q-show="jsonFail">
-  jsonContent:
-    meta: false
-    pages: false
-    posts:
-      title: true
-      date: true
-      path: true
-      text: true
-      raw: false
-      content: false
-      slug: false
-      updated: false
-      comments: false
-      link: false
-      permalink: false
-      excerpt: false
-      categories: false
-      tags: true
-</pre>
-          </p>
-          <li class="search-li" q-repeat="items" q-show="isShow">
-            <a q-attr="href:path|urlformat" class="search-title"><i class="icon-quo-left icon"></i><span q-text="title"></span></a>
-            <p class="search-time">
-              <i class="icon-calendar icon"></i>
-              <span q-text="date|dateformat"></span>
-            </p>
-            <p class="search-tag">
-              <i class="icon-price-tags icon"></i>
-              <span q-repeat="tags" q-on="click:choseTag(e, name)" q-text="name|tagformat"></span>
-            </p>
-          </li>
-        </ul>
-    	</section>
-    
 
-    
-    	<section class="tools-section tools-section-friends" q-show="friends">
-  		
-        <ul class="search-ul">
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
-            </li>
-          
-        </ul>
-  		
-    	</section>
-    
 
-    
-    	<section class="tools-section tools-section-me" q-show="aboutme">
-  	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
-  	  	
-    	</section>
-    
-  </div>
+
+
+
   
-</div>
-    <!-- Root element of PhotoSwipe. Must have class pswp. -->
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
-    <!-- Background of PhotoSwipe. 
-         It's a separate element as animating opacity is faster than rgba(). -->
-    <div class="pswp__bg"></div>
 
-    <!-- Slides wrapper with overflow:hidden. -->
-    <div class="pswp__scroll-wrap">
 
-        <!-- Container that holds slides. 
-            PhotoSwipe keeps only 3 of them in the DOM to save memory.
-            Don't modify these 3 pswp__item elements, data is added later on. -->
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
 
-        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-        <div class="pswp__ui pswp__ui--hidden">
 
-            <div class="pswp__top-bar">
 
-                <!--  Controls are self-explanatory. Order can be changed. -->
 
-                <div class="pswp__counter"></div>
 
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
 
-                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
 
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
 
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
 
-                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-                <!-- element will get class pswp__preloader--active when preloader is running -->
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                      <div class="pswp__preloader__cut">
-                        <div class="pswp__preloader__donut"></div>
-                      </div>
-                    </div>
-                </div>
-            </div>
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
 
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div> 
-            </div>
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
 
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
-        </div>
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
-    </div>
 
-</div>
-  </div>
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.1"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
 </body>
 </html>
