@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-05-19T02:49:02.780Z</updated>
+  <updated>2017-05-19T02:58:11.568Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,13 +16,14 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>Vue2.0+Vuex2.0+使用步骤</title>
     <link href="http://yoursite.com/2017/05/19/Vue2.0+Vuex2.0+%E4%BD%BF%E7%94%A8%E6%AD%A5%E9%AA%A4/"/>
     <id>http://yoursite.com/2017/05/19/Vue2.0+Vuex2.0+使用步骤/</id>
     <published>2017-05-19T02:50:38.149Z</published>
-    <updated>2017-05-19T02:49:02.780Z</updated>
+    <updated>2017-05-19T02:58:11.568Z</updated>
     
-    <content type="html"><![CDATA[<p><strong>首先你要在使用vue-cli脚手架开发的环境下学习本教程</strong></p>
+    <content type="html"><![CDATA[<hr>
+<p><strong>首先你要在使用vue-cli脚手架开发的环境下学习本教程</strong></p>
 <p><strong>1、在package.json文件中修改dependencies配置，添加vuex版本</strong></p>
 <p><img src="http://i.imgur.com/AShFHIv.png" alt=""></p>
 <pre><code>&quot;dependencies&quot;: {
@@ -48,9 +49,10 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;strong&gt;首先你要在使用vue-cli脚手架开发的环境下学习本教程&lt;/strong&gt;&lt;/p&gt;
+      &lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;首先你要在使用vue-cli脚手架开发的环境下学习本教程&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;1、在package.json文件中修改dependencies配置，添加vuex版本&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http:/
+&lt;p&gt;&lt;img src=&quot;h
     
     </summary>
     
