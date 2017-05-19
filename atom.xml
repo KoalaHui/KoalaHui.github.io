@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-04-26T01:12:48.145Z</updated>
+  <updated>2017-05-19T02:49:02.780Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,48 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/05/19/Vue2.0+Vuex2.0+%E4%BD%BF%E7%94%A8%E6%AD%A5%E9%AA%A4/"/>
+    <id>http://yoursite.com/2017/05/19/Vue2.0+Vuex2.0+使用步骤/</id>
+    <published>2017-05-19T02:50:38.149Z</published>
+    <updated>2017-05-19T02:49:02.780Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>首先你要在使用vue-cli脚手架开发的环境下学习本教程</strong></p>
+<p><strong>1、在package.json文件中修改dependencies配置，添加vuex版本</strong></p>
+<p><img src="http://i.imgur.com/AShFHIv.png" alt=""></p>
+<pre><code>&quot;dependencies&quot;: {
+ &quot;vue&quot;: &quot;^2.2.6&quot;,
+  &quot;vue-router&quot;: &quot;^2.3.1&quot;,
+ &quot;vuex&quot;:&quot;^2.0.0&quot;
+}
+</code></pre><p><strong>2、添加完后记得使用npm install</strong></p>
+<p><strong>3、新建vuex文件夹，并添加如下图的三个文件</strong></p>
+<p><img src="http://i.imgur.com/J9nE31b.png" alt=""></p>
+<p><strong>4、在main.js文件中应用store.js文件，并在new Vue中将store设置为参数</strong></p>
+<p><img src="http://i.imgur.com/0kwR1MD.png" alt=""></p>
+<p><strong>5、编写store.js文件</strong></p>
+<p><img src="http://i.imgur.com/OJI8TeU.png" alt=""></p>
+<p><strong>6、通过store.js文件中的mutations对象编写actions.js文件</strong></p>
+<p><img src="http://i.imgur.com/Lm1HguB.png" alt=""></p>
+<p><strong>7、编写getters.js文件</strong></p>
+<p><img src="http://i.imgur.com/iVnK7Mn.png" alt=""></p>
+<p><strong>8、在需要用到的文件中引入</strong></p>
+<p><strong>import {mapGetters, mapActions} from ‘vuex’;</strong><br><img src="http://i.imgur.com/CynnyUt.png" alt=""></p>
+<p><strong>小结：</strong><br><strong>通过明确的数据驱动关系，我们在项目初期就可以在store的state中定义一些不同组件都需要使用的数据这样当共享的数据发生变化时，其他组件也能即使更新数据</strong></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;首先你要在使用vue-cli脚手架开发的环境下学习本教程&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1、在package.json文件中修改dependencies配置，添加vuex版本&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http:/
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>前端进阶之CSS3</title>
