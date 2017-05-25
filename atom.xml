@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-05-19T02:58:11.568Z</updated>
+  <updated>2017-05-25T02:51:36.923Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,111 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>前端高级之性能优化</title>
+    <link href="http://yoursite.com/2017/05/25/%E5%89%8D%E7%AB%AF%E9%AB%98%E7%BA%A7%E4%B9%8B%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
+    <id>http://yoursite.com/2017/05/25/前端高级之性能优化/</id>
+    <published>2017-05-25T02:52:09.013Z</published>
+    <updated>2017-05-25T02:51:36.923Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://i.imgur.com/oXYlfAy.jpg" alt=""><br><a id="more"></a></p>
+<p><strong>从我们前端工程师的角度来看，能做到的性能优化主要有三大块：</strong></p>
+<pre><code>1、代码优化
+2、减少HTTP请求数量及大小
+3、合理利用缓存
+</code></pre><h2 id="1、-代码优化"><a href="#1、-代码优化" class="headerlink" title="1、 代码优化"></a>1、 代码优化</h2><p>首先，我们来说说代码优化，我们前端不像一些单语言开发者（android、IOS）他们只需要保持他们所用的java\Oc尽量或者是无限接近与最佳实践就可以了，前端需要考虑HTML、CSS、JS三种语言的最佳规范，这也无疑加大了一些难度。下面分别说说我们应该怎样去优化我们的代码：</p>
+<h3 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h3><pre><code>1. 样式表和脚本文件都采用外部文件链接方式加载（方便后面压缩、代码分块管理、表现与逻辑分离）
+    1. 
+    内联VS外置
+    单独提取好处： 
+    (1)提高了js和css的复用性 
+    (2)减小页面体积 
+    (3)提高了js和css的可维护性 
+    内联的好处： 
+    (1)减少页面请求 
+    (2)提升页面渲染速度 
+    使用内联的情况： 
+    (1)脚本和样式只应用于一个页面 
+    (2)页面不经常被访问 
+    (3)脚本和样式很少的情况 
+     在实际应用中使用外部文件可以提高页面速度，因为JavaScript和CSS文件都能在浏览器中
+     产生缓存。内置在HTML文档中的JavaScript和CSS则会在每次请求中随HTML文档重新下载。
+     这虽然减少了HTTP请求的次数，却增加了HTML文档的大小。
+
+2. 样式表链接定义在&lt;head&gt;内，脚本文件放在&lt;body&gt;结束之前
+3. 根据场景可采用JavaScript异步加载模式（动态创建&lt;script&gt;标签）
+4. 和渲染无关的脚步文件可以在window.onload()事件触发后再加载
+</code></pre><h3 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h3><pre><code>1. 使用复合（紧凑）语法
+2. 避免 !importants
+3. 避免使用Expressions（表达式），这会增加计算量
+4. 遵循一个标准的声明顺序
+    1.  /* Positioning */
+        /* Display &amp; Box Model */
+        /* Background and typography styles */
+        /* Transitions */
+        /* Other */
+
+5. 合理使用选择器(选择器性能排序，由高到低)
+    1. ID 规则
+    2. Class 规则
+    3. 标签规则
+    4. 通用规则
+</code></pre><h3 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h3><pre><code>1. 尽量少用全局变量，建议使用局部变量
+2. 将对象或数组中常用的数据用变量存起来使用（变量和数值的性能优于对象和数组）
+3. 不要使用with语句（会增加作用域链长度）
+4. 避免 for-in 循环（ 为了遍历这些元素，JavaScript需要为每一个元素建立一个函数，这种
+   基于函数的迭代带来了一系列性能问题：额外的函数引入了函数对象被创建和销毁的上下文，将
+   会在作用域链的顶端增加额外的元素）使用for\do-while来代替
+5. 避免在js中操作DOM
+6. 修改CSS类，而不是样式
+7. 有效利用正则表达式处理字符串
+8. 尽量使用全等===做判断（避免变量隐式转换）
+9. 利用setTimeout定时器将耗时长的大任务分割为N个异步任务执行
+</code></pre><h2 id="2、减少HTTP请求数量及大小"><a href="#2、减少HTTP请求数量及大小" class="headerlink" title="2、减少HTTP请求数量及大小"></a>2、减少HTTP请求数量及大小</h2><h4 id="合并文件"><a href="#合并文件" class="headerlink" title="合并文件"></a>合并文件</h4><p>将脚本文件和样式表文件分别合并到一个文件中，可以减少HTTP请求的数量并缩短最终用户响应时间。当脚本或者样式表在不同页面中使用时需要做不同的修改，这可能会相对麻烦点，但即便如此也要把这个方法作为改善页面性能的重要一步。</p>
+<h4 id="CSS-Sprites（雪碧图）、字体图标"><a href="#CSS-Sprites（雪碧图）、字体图标" class="headerlink" title="CSS Sprites（雪碧图）、字体图标"></a>CSS Sprites（雪碧图）、字体图标</h4><p>这是减少图像请求的有效方法，把所有的背景图像都放到一个图片文件中，然后通过CSS的background-image和background-position属性来显示图片的不同部分；合并后的图片会比分离的图片总和要小，这是因为它降低了图片自身的开销。</p>
+<h4 id="内联图像"><a href="#内联图像" class="headerlink" title="内联图像"></a>内联图像</h4><p>使用data:URL 模式可以在web页面中包含图片但无需任何额外的HTTP请求。把内联图像放到样式表（可缓存）中可以减少HTTP请求同时又避免增加页面文件的大小。但是内联图像现在还没有得到主流浏览器的支持。</p>
+<h4 id="启用Gzip压缩"><a href="#启用Gzip压缩" class="headerlink" title="启用Gzip压缩"></a>启用Gzip压缩</h4><p>通过减小HTTP响应的大小也可以节省HTTP响应时间。Gzip可以压缩所有可能的文件类型，是减少文件体积、增加用户体验的简单方法。<br>从HTTP/1.1开始，web客户端都默认支持HTTP请求中有Accept-Encoding文件头的压缩格式：Accept-Encoding: gzip<br>如果web服务器在请求的文件头中检测到上面的代码，就会以客户端列出的方式压缩响应内容。Web服务器把压缩方式通过响应文件头中的Content-Encoding来返回给浏览器。<br>Content-Encoding: gzip</p>
+<h4 id="压缩-JavaScript-和-CSS"><a href="#压缩-JavaScript-和-CSS" class="headerlink" title="压缩 JavaScript 和 CSS"></a>压缩 JavaScript 和 CSS</h4><p>压缩是指从去除代码不必要的字符减少文件大小从而节省下载时间。<br>方法：<br>1.去除不必要的空白符（空格、换行、tab缩进）、格式符、注释符<br>2.简写方法名、参数名来压缩js脚本<br>在 JavaScript中，由于需要下载的文件体积变小了从而节省了响应时间。</p>
+<h4 id="避免重定向"><a href="#避免重定向" class="headerlink" title="避免重定向"></a>避免重定向</h4><p>301(永久重定向)和302(临时重定向),这两个重定向用的比较多。<br>但是要记住重定向会降低用户体验。在用户和HTML文档中间增加一个跳转，会拖延页面中所有元素的显示，因为在HTML文件被加载前任何文件（图像、Flash等）都不会被下载。</p>
+<h2 id="3、合理利用缓存"><a href="#3、合理利用缓存" class="headerlink" title="3、合理利用缓存"></a>3、合理利用缓存</h2><p>添加Expire/Cache-Control头</p>
+<p>首先说明一下：Expire属于HTTP/1.0，Cache-Control属于HTTP/1.1。这两者起到的作用是一致的。<br>通过使用Expires或者Cache-Control就可以使请求的内容具有缓存性，它避免了接下来的页面访问中不必要的HTTP请求。Expires头的内容是一个时间值，值就是资源在本地的过期时间。在当前时间还没有超过缓存资源的过期时间时，就直接使用这一缓存的资源，不会发送HTTP请求。Cache-Control的作用也是类似的，只不过它的值是一个表示距离缓存过期的一个秒数时间。</p>
+<h2 id="4、其他"><a href="#4、其他" class="headerlink" title="4、其他"></a>4、其他</h2><h4 id="减少DNS查找次数-DNS缓存"><a href="#减少DNS查找次数-DNS缓存" class="headerlink" title="减少DNS查找次数(DNS缓存)"></a>减少DNS查找次数(DNS缓存)</h4><p>在浏览器中输入一个域名，回车后，DNS（域名系统）会先将域名解析成对应的IP地址，然后根据IP地址去找到相应的网址。<br><img src="http://i.imgur.com/3MellvJ.png" alt=""></p>
+<p>这样就完成了一个DNS查找，这个查找过程当然是要消耗时间的，大约消耗20毫秒，在这个查找过程中，我们的浏览器什么都不会做，保持一片空白。如果这样的查找很多，那么我们的网页性能将会受到很大影响，这就需要用到DNS缓存。</p>
+<p><strong>现代的浏览器都有自己的缓存机制：</strong></p>
+<p> IE默认情况下对DNS查找记录的缓存时间为30分钟，Firefox默认情况下对DNS查找记录的缓存时间为1分钟，Chrome默认情况下对DNS查找记录的缓存时间为1分钟。</p>
+<p>缓存时间缓存时间长优点：减少DNS的重复查找，节省时间</p>
+<p>缓存时间短优点：能够及时的检测网站服务器IP地址的变化，保证访问的正确性</p>
+<p><strong>单域和多域</strong></p>
+<p>举个例子：<em>多域情况下</em>，我们可以将我们的网站资源：html文件、图片、脚本文件分别放在三个不同的域名下去请求访问 </p>
+<p>单域情况下，我们可以将我们的网站所有资源都放在同一个域名下请求访问。 </p>
+<p>多域名的好处是：能够实现页面中资源文件的并行下载。但是会增加DNS查找的次数。</p>
+<p>单域名好处： 减少主机名的数量可以减少DNS查找次数，但是也会减少资源并行下载，从而会增加响应时间。 </p>
+<p>一般的原则是：把这些页面中的内容分割成至少两部分但不超过四部分。这种结果就是在减少DNS查找次数和保持较高程度并行下载两者之间的权衡了。</p>
+<h4 id="配置实体标签（ETag）"><a href="#配置实体标签（ETag）" class="headerlink" title="配置实体标签（ETag）"></a>配置实体标签（ETag）</h4><p>Entity tag（ETag）（实体标签）是web服务器和浏览器用于判断浏览器缓存中的内容和服务器中的原始内容是否匹配的一种机制。</p>
+<p>如果一致，则直接使用缓存中的内容，不需要服务器提供了。<br>增加ETag为实体的验证提供了一个比使用”last-modified date（上次编辑时间）”更加灵活的机制。</p>
+<p>Etag是一个识别内容版本号的唯一字符串。唯一的格式限制就是它必须包含在双引号内。原始服务器通过含有 ETag文件头的响应指定页面内容的ETag。</p>
+<pre><code>HTTP/1.1 200 OK Last-Modified: Tue, 12 Dec 2015 03:03:59 GMT ETag: &quot;10c24bc-4ab-457e1c1f&quot; Content-Length: 12166
+</code></pre><p>如果浏览器要验证一个文件，它会使用If-None-Match文件头来把ETag传回给原始服务器。</p>
+<p>在这个例子中，ETag是匹配的，就会返回一 个304状态码，这就节省了12166字节的响应。<br>      <code>If-Modified-Since: Tue, 12 Dec 2006 03:03:59 GMT</code></p>
+<p>   <code>If-None-Match: &quot;10c24bc-4ab-457e1c</code></p>
+<p><strong>首先来说一下get和post的区别：</strong><br><img src="http://i.imgur.com/91UBCP4.jpg" alt=""><br><img src="http://i.imgur.com/Bq0yx0X.jpg" alt=""></p>
+<p>Ajax经常被提及的一个好处就是由于其从后台服务器传输信息的异步性而为用户带来的反馈的即时性。但是，使用Ajax并不能保证用户不会在等待异步的 JavaScript和XML响应上花费时间。在很多应用中，用户是否需要等待响应取决于Ajax如何来使用。记住一点，“异步”并不意味着”即时”，这很重要。<br>为了提高性能，优化Ajax响应是很重要的。提高Ajax性能的措施中最重要的方法就是使响应具有可缓存性(为文件头指定Expires或Cache-Control )。其它的几条规则也同样适用于Ajax：</p>
+<pre><code>* Gizp压缩文件
+* 减少DNS查找次数
+* 精简JavaScript
+* 避免跳转
+* 配置ETag(实体标签)
+</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://i.imgur.com/oXYlfAy.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Vue2.0+Vuex2.0+使用步骤</title>
