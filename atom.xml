@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-05-25T02:51:36.923Z</updated>
+  <updated>2017-06-20T06:45:00.109Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,208 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>动画的实现方式总结</title>
+    <link href="http://yoursite.com/2017/06/20/%E5%8A%A8%E7%94%BB%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F%E6%80%BB%E7%BB%93/"/>
+    <id>http://yoursite.com/2017/06/20/动画的实现方式总结/</id>
+    <published>2017-06-20T06:45:22.876Z</published>
+    <updated>2017-06-20T06:45:00.109Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://i.imgur.com/ZcE5RlD.jpg" alt=""><br><a id="more"></a></p>
+<h2 id="1-css的transition"><a href="#1-css的transition" class="headerlink" title="1.css的transition"></a><strong>1.css的transition</strong></h2><p>语法：<br>transition: property duration timing-function delay;</p>
+<p>property:填写需要变化的css属性如：width,line-height,font-size,color等;</p>
+<p>duration:完成过渡效果需要的时间（2s 或者2000ms）</p>
+<p>timing-function:完成效果的速度曲线（linear,ease,ease-in,ease-out等等）</p>
+<p>timing-delay:动画效果的延迟触发时间（2s 或者2000ms）</p>
+<p>例子：</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;transition动画&lt;/title&gt;
+&lt;style&gt;
+#tran{
+width: 200px;
+height: 200px;
+background: red;
+transform: rotate(0deg);//一个属性，可以让我们的元素变大变小和旋转、透明
+transition: transform 2s ease 0s;
+}
+#tran:hover{
+transform: rotate(90deg);
+background: blue;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;tran&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h2 id="2-css3的animation属性"><a href="#2-css3的animation属性" class="headerlink" title="2.css3的animation属性"></a>2.css3的animation属性</h2><p>语法：<br>animation: name duration timing-function delay iteration-count direction;</p>
+<p>name:keyframe的名称，也就是定义了关键帧的动画的名称,这个名称用来区别不同的动画。</p>
+<p>duration:完成动画所需要的时间（2s 或者 2000ms）</p>
+<p>timing-function:完成动画的速度曲线</p>
+<p>delay：动画开始之前的延迟</p>
+<p>iteration-count：动画播放次数</p>
+<p>direction：是否轮流反向播放动画（normal:正常顺序播放，alternate下一次反向播放）如果把动画设置为只播放一次，则该属性没有效果。</p>
+<p>例子：</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;animation动画&lt;/title&gt;
+&lt;style&gt;
+#anim{
+width: 200px;
+height: 200px;
+background: red;
+animation: animation1 2s infinite;
+}
+@keyframes animation1 {
+0% {
+width: 200px;
+height: 200px;
+}
+50%{
+width: 100px;
+height: 100px;
+}
+100%{
+width: 200px;
+height: 200px;
+}
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;anim&quot; class=&quot;animation1&quot;&gt;
+
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h2 id="3-Jquery的animate函数"><a href="#3-Jquery的animate函数" class="headerlink" title="3.Jquery的animate函数"></a>3.Jquery的animate函数</h2><p>语法：<br>$(selector).animate(styles,options)</p>
+<p>styles:产生动画的css样式和值；（只可以是带数值的样式，不能改变颜色等）</p>
+<p>options={</p>
+<p>   speed:动画的速度（可选参数：slow,normal,fase）</p>
+<p>   easing：动画的速度函数（可选参数：swing，linear）</p>
+<p>   callback：动画完成之后要执行的函数；</p>
+<p>   queue：是否放置在效果队列中，是布尔值，为false则立即开始</p>
+<p>   specialEasing:styles参数的一个或多个属性映射及对应的easing函数。}</p>
+<p>例子：</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;jqurey的animation动画&lt;/title&gt;
+    &lt;style&gt;
+        #anim{
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;div id=&quot;anim&quot;&gt;
+&lt;/div&gt;
+&lt;script src=&quot;../jquery-1.8.2.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+    $(&apos;#anim&apos;).hover(function () {
+        $(&apos;#anim&apos;).animate({
+            width: 200,
+        height: 200
+        }, {duration:&apos;2000&apos;,
+            specialEasing: {
+                left: &apos;swing&apos;,
+                top: &apos;linear&apos;
+            }
+        });
+    });
+
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h2 id="4-原生js动画"><a href="#4-原生js动画" class="headerlink" title="4.原生js动画"></a>4.原生js动画</h2><p>原生js动画利用js代码，将动画一步以函数的方式写出来，可以实现多种动画样式，而且可以自己做兼容性处理，自己设立每一步的动画效果，并且能够完成比较复杂的效果，但是代码量很大。</p>
+<p>如下面的例子：需要自己定义所有的动态函数，并进行计算、判断和处理</p>
+<p>例子：</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;js原生代码实现动画&lt;/title&gt;
+    &lt;style&gt;
+        .odiv{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;odiv&quot; class=&quot;odiv&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script language=&quot;javascript&quot;&gt;
+    window.onload = function(){
+        var odiv = document.getElementById(&apos;odiv&apos;);
+        odiv.onmouseover = function(){
+            startMover(0);
+        }
+        odiv.onmouseout = function(){
+            startMover(-200);
+        }
+    }
+    var timer = null;
+    function startMover(a){//速度和目标值
+        clearInterval(timer);//执行当前动画同时清除之前的动画
+        var odiv = document.getElementById(&apos;odiv&apos;);
+        timer = setInterval(function(){
+            var speed = (a-odiv.offsetLeft)/10;//缓冲动画的速度参数变化值
+            //如果速度是大于0，说明是向右走，那么就向上取整
+            speed = speed&gt;0?Math.ceil(speed):Math.floor(speed);
+            //Math.floor();向下取整
+            if(odiv.offsetLeft == a){
+                clearInterval(timer);
+            }
+            else{
+                odiv.style.left = odiv.offsetLeft+speed+&apos;px&apos;;
+            }
+        },500);
+    }
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h2 id="5-插件"><a href="#5-插件" class="headerlink" title="5.插件"></a>5.插件</h2><p>网上可以搜到很多封装好的动画插件，这些插件可以直接引入到页面中，通过初试话和配置的方式进行设定，直接在页面中展示动画。</p>
+<p>如：waves，textillate.js、animation.css等</p>
+<h2 id="6-使用canvas制作动画"><a href="#6-使用canvas制作动画" class="headerlink" title="6.使用canvas制作动画"></a>6.使用canvas制作动画</h2><p>我们还可以使用canvas在浏览器上画图，并且利用其api，制作动画。canvas使用的地方非常多，尤其是在制作h5小游戏上。</p>
+<p>同样都是使用编码的方式由前端开发工程师完成动画效果，canvas要比原生js效率高的多，流畅的多。</p>
+<p>通过画笔的方式，能够轻松的实现更多的动画效果，但是需要掌握canvas是要在练习上下一番苦功夫的。</p>
+<h2 id="7-引用gif图片"><a href="#7-引用gif图片" class="headerlink" title="7.引用gif图片"></a>7.引用gif图片</h2><p>如果在需求特别紧急，而且动画又特别复杂的情况下，自己没有把握按时实现效果，或者代价太大，真的，别犹豫，上gif图片吧</p>
+<h2 id="8-SVG动画（IE版本都不支持）"><a href="#8-SVG动画（IE版本都不支持）" class="headerlink" title="8.SVG动画（IE版本都不支持）"></a>8.SVG动画（IE版本都不支持）</h2><pre><code>1. &lt;set&gt;
+2. &lt;animate&gt;
+3. &lt;animateColor&gt;
+4. &lt;animateTransform&gt;
+5. &lt;animateMotion&gt;
+</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://i.imgur.com/ZcE5RlD.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>前端高级之性能优化</title>
     <link href="http://yoursite.com/2017/05/25/%E5%89%8D%E7%AB%AF%E9%AB%98%E7%BA%A7%E4%B9%8B%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
     <id>http://yoursite.com/2017/05/25/前端高级之性能优化/</id>
-    <published>2017-05-25T02:52:09.013Z</published>
-    <updated>2017-05-25T02:51:36.923Z</updated>
+    <published>2017-05-25T02:52:09.014Z</published>
+    <updated>2017-05-25T02:51:36.924Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://i.imgur.com/oXYlfAy.jpg" alt=""><br><a id="more"></a></p>
 <p><strong>从我们前端工程师的角度来看，能做到的性能优化主要有三大块：</strong></p>
@@ -124,7 +321,7 @@
     <title>Vue2.0+Vuex2.0+使用步骤</title>
     <link href="http://yoursite.com/2017/05/19/Vue2.0+Vuex2.0+%E4%BD%BF%E7%94%A8%E6%AD%A5%E9%AA%A4/"/>
     <id>http://yoursite.com/2017/05/19/Vue2.0+Vuex2.0+使用步骤/</id>
-    <published>2017-05-19T02:50:38.149Z</published>
+    <published>2017-05-19T02:50:38.150Z</published>
     <updated>2017-05-19T02:58:11.568Z</updated>
     
     <content type="html"><![CDATA[<hr>
@@ -169,7 +366,7 @@
     <link href="http://yoursite.com/2017/04/25/%E5%89%8D%E7%AB%AF%E8%BF%9B%E9%98%B6%E4%B9%8BCSS3/"/>
     <id>http://yoursite.com/2017/04/25/前端进阶之CSS3/</id>
     <published>2017-04-25T09:16:22.420Z</published>
-    <updated>2017-04-26T01:12:48.145Z</updated>
+    <updated>2017-04-26T01:12:48.146Z</updated>
     
     <content type="html"><![CDATA[<hr>
 <h1 id="CSS3将CSS2-1完善"><a href="#CSS3将CSS2-1完善" class="headerlink" title="CSS3将CSS2.1完善"></a>CSS3将CSS2.1完善</h1><h3 id="一、特殊边框"><a href="#一、特殊边框" class="headerlink" title="一、特殊边框"></a>一、特殊边框</h3><p>通过 CSS3，能够创建圆角边框，向矩形添加阴影，使用图片来绘制边框。</p>
@@ -420,7 +617,7 @@ margin: 10px;
     <title>前端基础之javascript</title>
     <link href="http://yoursite.com/2017/04/17/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80%E4%B9%8Bjavascript/"/>
     <id>http://yoursite.com/2017/04/17/前端基础之javascript/</id>
-    <published>2017-04-17T09:12:59.899Z</published>
+    <published>2017-04-17T09:12:59.900Z</published>
     <updated>2017-04-26T01:12:31.314Z</updated>
     
     <content type="html"><![CDATA[<hr>
@@ -560,7 +757,7 @@ margin: 10px;
     <title>前端基础之浏览器运行原理</title>
     <link href="http://yoursite.com/2017/04/10/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86/"/>
     <id>http://yoursite.com/2017/04/10/浏览器的运行原理/</id>
-    <published>2017-04-10T08:40:21.837Z</published>
+    <published>2017-04-10T08:40:21.838Z</published>
     <updated>2017-04-26T01:11:45.018Z</updated>
     
     <content type="html"><![CDATA[<p>##前言</p>
@@ -630,7 +827,7 @@ Hello DOM
     <link href="http://yoursite.com/2017/04/10/HTML/"/>
     <id>http://yoursite.com/2017/04/10/HTML/</id>
     <published>2017-04-10T08:29:49.833Z</published>
-    <updated>2017-04-26T01:18:27.860Z</updated>
+    <updated>2017-04-26T01:18:27.861Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://i.imgur.com/gndNOPY.jpg" alt=""><br><a id="more"></a></p>
 <h1 id="HTML是什么？"><a href="#HTML是什么？" class="headerlink" title="HTML是什么？"></a>HTML是什么？</h1><p>HTML(Hyper Text Markup Language超文本标记语言 ) 是一种基础技术，常与CSS、JavaScript一起被众多网站用于设计令人赏心悦目的网页、网页应用程序以及移动应用程序的用户界面。 网页浏览器可以读取HTML文件，并将其渲染成可视化网页。 HTML描述了一个网站的结构语义随着线索的呈现，使之成为一种标记语言而非编程语言；这是维基百科的解释，而我眼中的HTML则是一个容器，用来容纳各种我们需要展示的文字，图片，声音的容器。</p>

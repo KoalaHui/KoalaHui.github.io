@@ -94,14 +94,14 @@
 
 <meta name="keywords">
 <meta property="og:type" content="article">
-<meta property="og:title" content="前端基础之HTML">
-<meta property="og:url" content="http://yoursite.com/2017/04/10/HTML/index.html">
+<meta property="og:title" content="动画的实现方式总结">
+<meta property="og:url" content="http://yoursite.com/2017/06/20/动画的实现方式总结/index.html">
 <meta property="og:site_name" content="KoalaHui的博客">
-<meta property="og:image" content="http://i.imgur.com/gndNOPY.jpg">
-<meta property="og:updated_time" content="2017-04-26T01:18:27.861Z">
+<meta property="og:image" content="http://i.imgur.com/ZcE5RlD.jpg">
+<meta property="og:updated_time" content="2017-06-20T06:45:00.109Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="前端基础之HTML">
-<meta name="twitter:image" content="http://i.imgur.com/gndNOPY.jpg">
+<meta name="twitter:title" content="动画的实现方式总结">
+<meta name="twitter:image" content="http://i.imgur.com/ZcE5RlD.jpg">
 
 
 
@@ -129,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/04/10/HTML/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/06/20/动画的实现方式总结/"/>
 
 
 
 
 
-  <title>前端基础之HTML | KoalaHui的博客</title>
+  <title>动画的实现方式总结 | KoalaHui的博客</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="">
@@ -254,7 +254,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/10/HTML/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/20/动画的实现方式总结/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="KoalaHui">
@@ -275,7 +275,7 @@
             
             
               
-                前端基础之HTML
+                动画的实现方式总结
               
             
           </h1>
@@ -290,8 +290,8 @@
               
                 <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-10T16:29:49+08:00">
-                2017-04-10
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-06-20T14:45:22+08:00">
+                2017-06-20
               </time>
             
 
@@ -325,31 +325,186 @@
       
 
       
-        <p><img src="http://i.imgur.com/gndNOPY.jpg" alt=""><br><a id="more"></a></p>
-<h1 id="HTML是什么？"><a href="#HTML是什么？" class="headerlink" title="HTML是什么？"></a>HTML是什么？</h1><p>HTML(Hyper Text Markup Language超文本标记语言 ) 是一种基础技术，常与CSS、JavaScript一起被众多网站用于设计令人赏心悦目的网页、网页应用程序以及移动应用程序的用户界面。 网页浏览器可以读取HTML文件，并将其渲染成可视化网页。 HTML描述了一个网站的结构语义随着线索的呈现，使之成为一种标记语言而非编程语言；这是维基百科的解释，而我眼中的HTML则是一个容器，用来容纳各种我们需要展示的文字，图片，声音的容器。</p>
-<h1 id="HTML用来做什么？"><a href="#HTML用来做什么？" class="headerlink" title="HTML用来做什么？"></a>HTML用来做什么？</h1><p>它容纳了我们需要展示的文字、图片、声音，然后我们可以通过浏览器来查看它，（HTML是用来制作网站的。就这么简单！）</p>
-<h1 id="HTML怎么用？"><a href="#HTML怎么用？" class="headerlink" title="HTML怎么用？"></a>HTML怎么用？</h1><p>HTML分为很多种类，不同的类型装载不同的内容，比如说</p>
-<p><code>&lt;img&gt;</code>是用来容纳图片的</p>
-<p><code>&lt;p&gt;</code>是用来容纳文字的</p>
-<p><code>&lt;div&gt;</code>则是用来容纳前面所说的<code>&lt;img&gt;&lt;p&gt;</code>等的容器</p>
-<p>他们分工明确，你要做的只是像垃圾分类一样，把你需要展示给用户的内容放入对的容器，就是这么简单；<br>当然容器是有大小、颜色、姓名的 而这些你都可以控制，就是给你的容器添加你需要的属性：width、heigth、id等等；</p>
-<p>下面就是一段标准的HTML文档</p>
-<pre><code>    &lt;!DOCTYPE html&gt;
+        <p><img src="http://i.imgur.com/ZcE5RlD.jpg" alt=""><br><a id="more"></a></p>
+<h2 id="1-css的transition"><a href="#1-css的transition" class="headerlink" title="1.css的transition"></a><strong>1.css的transition</strong></h2><p>语法：<br>transition: property duration timing-function delay;</p>
+<p>property:填写需要变化的css属性如：width,line-height,font-size,color等;</p>
+<p>duration:完成过渡效果需要的时间（2s 或者2000ms）</p>
+<p>timing-function:完成效果的速度曲线（linear,ease,ease-in,ease-out等等）</p>
+<p>timing-delay:动画效果的延迟触发时间（2s 或者2000ms）</p>
+<p>例子：</p>
+<pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;title&gt;我是标准的HTML模板，你可以放你要放的东西进来&lt;/title&gt;
+&lt;title&gt;transition动画&lt;/title&gt;
+&lt;style&gt;
+#tran{
+width: 200px;
+height: 200px;
+background: red;
+transform: rotate(0deg);//一个属性，可以让我们的元素变大变小和旋转、透明
+transition: transform 2s ease 0s;
+}
+#tran:hover{
+transform: rotate(90deg);
+background: blue;
+}
+&lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;
-&lt;div id=&quot;旺财&quot;&gt;
-&lt;img src=&quot;http://image.baidu.com&quot; alt=&quot;#&quot; style=&quot;width: 200px;height: 200px;&quot;&gt;
-&lt;p&gt;我的名字是旺财&lt;/p&gt;
+&lt;div id=&quot;tran&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h2 id="2-css3的animation属性"><a href="#2-css3的animation属性" class="headerlink" title="2.css3的animation属性"></a>2.css3的animation属性</h2><p>语法：<br>animation: name duration timing-function delay iteration-count direction;</p>
+<p>name:keyframe的名称，也就是定义了关键帧的动画的名称,这个名称用来区别不同的动画。</p>
+<p>duration:完成动画所需要的时间（2s 或者 2000ms）</p>
+<p>timing-function:完成动画的速度曲线</p>
+<p>delay：动画开始之前的延迟</p>
+<p>iteration-count：动画播放次数</p>
+<p>direction：是否轮流反向播放动画（normal:正常顺序播放，alternate下一次反向播放）如果把动画设置为只播放一次，则该属性没有效果。</p>
+<p>例子：</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;animation动画&lt;/title&gt;
+&lt;style&gt;
+#anim{
+width: 200px;
+height: 200px;
+background: red;
+animation: animation1 2s infinite;
+}
+@keyframes animation1 {
+0% {
+width: 200px;
+height: 200px;
+}
+50%{
+width: 100px;
+height: 100px;
+}
+100%{
+width: 200px;
+height: 200px;
+}
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;anim&quot; class=&quot;animation1&quot;&gt;
+
 &lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre><h1 id="HTML中需要注意的地方"><a href="#HTML中需要注意的地方" class="headerlink" title="HTML中需要注意的地方"></a>HTML中需要注意的地方</h1><p>你可以以多种不同的方式来编写HTML；同时，浏览器也可以以多种不同的方式来理解HTML。你可以认为<strong>HTML有很多种方言</strong>。这就是为什么某些网站会在不同的浏览器上显示出不同效果的原因。就像是不同的家庭拥有不同的容器，你尽量选择大家都有的容器来容纳你需要的内容。</p>
-<h1 id="HTML拓展"><a href="#HTML拓展" class="headerlink" title="HTML拓展"></a>HTML拓展</h1><p>XHTML是HTML的严格模式，怎么说呢，就像是规定了容器的名字必须是用小写字母写的（标签名小写）；<br>容器装了东西后必须盖好（标签必须关闭）；<br>容器与容器之间的关系必须正确，不能小容器装大容器，大容器的盖子盖到小容器上面等等（元素必须被正确地嵌套）<br>所有的容器必须放在一个架子上面（ 文档必须拥有根元素）</p>
+</code></pre><h2 id="3-Jquery的animate函数"><a href="#3-Jquery的animate函数" class="headerlink" title="3.Jquery的animate函数"></a>3.Jquery的animate函数</h2><p>语法：<br>$(selector).animate(styles,options)</p>
+<p>styles:产生动画的css样式和值；（只可以是带数值的样式，不能改变颜色等）</p>
+<p>options={</p>
+<p>   speed:动画的速度（可选参数：slow,normal,fase）</p>
+<p>   easing：动画的速度函数（可选参数：swing，linear）</p>
+<p>   callback：动画完成之后要执行的函数；</p>
+<p>   queue：是否放置在效果队列中，是布尔值，为false则立即开始</p>
+<p>   specialEasing:styles参数的一个或多个属性映射及对应的easing函数。}</p>
+<p>例子：</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;jqurey的animation动画&lt;/title&gt;
+    &lt;style&gt;
+        #anim{
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
 
+&lt;body&gt;
+&lt;div id=&quot;anim&quot;&gt;
+&lt;/div&gt;
+&lt;script src=&quot;../jquery-1.8.2.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+    $(&apos;#anim&apos;).hover(function () {
+        $(&apos;#anim&apos;).animate({
+            width: 200,
+        height: 200
+        }, {duration:&apos;2000&apos;,
+            specialEasing: {
+                left: &apos;swing&apos;,
+                top: &apos;linear&apos;
+            }
+        });
+    });
+
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h2 id="4-原生js动画"><a href="#4-原生js动画" class="headerlink" title="4.原生js动画"></a>4.原生js动画</h2><p>原生js动画利用js代码，将动画一步以函数的方式写出来，可以实现多种动画样式，而且可以自己做兼容性处理，自己设立每一步的动画效果，并且能够完成比较复杂的效果，但是代码量很大。</p>
+<p>如下面的例子：需要自己定义所有的动态函数，并进行计算、判断和处理</p>
+<p>例子：</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;js原生代码实现动画&lt;/title&gt;
+    &lt;style&gt;
+        .odiv{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;odiv&quot; class=&quot;odiv&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script language=&quot;javascript&quot;&gt;
+    window.onload = function(){
+        var odiv = document.getElementById(&apos;odiv&apos;);
+        odiv.onmouseover = function(){
+            startMover(0);
+        }
+        odiv.onmouseout = function(){
+            startMover(-200);
+        }
+    }
+    var timer = null;
+    function startMover(a){//速度和目标值
+        clearInterval(timer);//执行当前动画同时清除之前的动画
+        var odiv = document.getElementById(&apos;odiv&apos;);
+        timer = setInterval(function(){
+            var speed = (a-odiv.offsetLeft)/10;//缓冲动画的速度参数变化值
+            //如果速度是大于0，说明是向右走，那么就向上取整
+            speed = speed&gt;0?Math.ceil(speed):Math.floor(speed);
+            //Math.floor();向下取整
+            if(odiv.offsetLeft == a){
+                clearInterval(timer);
+            }
+            else{
+                odiv.style.left = odiv.offsetLeft+speed+&apos;px&apos;;
+            }
+        },500);
+    }
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h2 id="5-插件"><a href="#5-插件" class="headerlink" title="5.插件"></a>5.插件</h2><p>网上可以搜到很多封装好的动画插件，这些插件可以直接引入到页面中，通过初试话和配置的方式进行设定，直接在页面中展示动画。</p>
+<p>如：waves，textillate.js、animation.css等</p>
+<h2 id="6-使用canvas制作动画"><a href="#6-使用canvas制作动画" class="headerlink" title="6.使用canvas制作动画"></a>6.使用canvas制作动画</h2><p>我们还可以使用canvas在浏览器上画图，并且利用其api，制作动画。canvas使用的地方非常多，尤其是在制作h5小游戏上。</p>
+<p>同样都是使用编码的方式由前端开发工程师完成动画效果，canvas要比原生js效率高的多，流畅的多。</p>
+<p>通过画笔的方式，能够轻松的实现更多的动画效果，但是需要掌握canvas是要在练习上下一番苦功夫的。</p>
+<h2 id="7-引用gif图片"><a href="#7-引用gif图片" class="headerlink" title="7.引用gif图片"></a>7.引用gif图片</h2><p>如果在需求特别紧急，而且动画又特别复杂的情况下，自己没有把握按时实现效果，或者代价太大，真的，别犹豫，上gif图片吧</p>
+<h2 id="8-SVG动画（IE版本都不支持）"><a href="#8-SVG动画（IE版本都不支持）" class="headerlink" title="8.SVG动画（IE版本都不支持）"></a>8.SVG动画（IE版本都不支持）</h2><pre><code>1. &lt;set&gt;
+2. &lt;animate&gt;
+3. &lt;animateColor&gt;
+4. &lt;animateTransform&gt;
+5. &lt;animateMotion&gt;
+</code></pre>
       
     </div>
 
@@ -385,15 +540,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/10/浏览器的运行原理/" rel="next" title="前端基础之浏览器运行原理">
-                <i class="fa fa-chevron-left"></i> 前端基础之浏览器运行原理
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/05/25/前端高级之性能优化/" rel="prev" title="前端高级之性能优化">
+                前端高级之性能优化 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -511,7 +666,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HTML是什么？"><span class="nav-number">1.</span> <span class="nav-text">HTML是什么？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HTML用来做什么？"><span class="nav-number">2.</span> <span class="nav-text">HTML用来做什么？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HTML怎么用？"><span class="nav-number">3.</span> <span class="nav-text">HTML怎么用？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HTML中需要注意的地方"><span class="nav-number">4.</span> <span class="nav-text">HTML中需要注意的地方</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HTML拓展"><span class="nav-number">5.</span> <span class="nav-text">HTML拓展</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-css的transition"><span class="nav-number">1.</span> <span class="nav-text">1.css的transition</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-css3的animation属性"><span class="nav-number">2.</span> <span class="nav-text">2.css3的animation属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Jquery的animate函数"><span class="nav-number">3.</span> <span class="nav-text">3.Jquery的animate函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-原生js动画"><span class="nav-number">4.</span> <span class="nav-text">4.原生js动画</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-插件"><span class="nav-number">5.</span> <span class="nav-text">5.插件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-使用canvas制作动画"><span class="nav-number">6.</span> <span class="nav-text">6.使用canvas制作动画</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-引用gif图片"><span class="nav-number">7.</span> <span class="nav-text">7.引用gif图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-SVG动画（IE版本都不支持）"><span class="nav-number">8.</span> <span class="nav-text">8.SVG动画（IE版本都不支持）</span></a></li></ol></div>
             
 
           </div>
